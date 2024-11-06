@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust习题/第三章习题未修正.md",
+                "file": "Rust学习笔记/Rust学习笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "第三章习题未修正"
+              "title": "Rust学习笔记"
             }
           }
         ]
@@ -160,8 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 787.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,6 +175,7 @@
   },
   "active": "048a1eefdc312215",
   "lastOpenFiles": [
+    "Rust习题/第三章习题未修正.md",
     "Rust学习笔记/Rust学习笔记.md",
     "Rust学习笔记/image/Pasted image 20241106180246.png",
     "Rust学习笔记/image/Pasted_image_20241105202526.png",
@@ -197,7 +197,6 @@
     "image/pasted image 20241105202526.png.md",
     "Rust学习笔记/image",
     "未命名.md",
-    "Rust习题/第三章习题未修正.md",
     "2024-11-06.md",
     "Rust学习笔记/Rust学习笔记 1.md",
     "Rust学习笔记/image",
