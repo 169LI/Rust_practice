@@ -10,8 +10,8 @@ Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https:/
 + 如果你是用的是 Windows 操作系统，你需要安装 Visual Studio 2013 或以上的环境（需要 C/C++ 支持）以使用 MSVC 或安装 MinGW + GCC 编译环境
 ## 1 下载过vs2022 
 （没下过也不建议你下了   还不如开虚拟机用linux系统）
-![[.\image\pasted image 20241105202526.png]]
-![Pasted image 20241105202526.png]()
+![[.\image\Pasted image 20241105202526.png]]
+ ![](image/Pasted image 20241105202526.png)
 ## 2 rust 编译工具
 官方下载地址: [rust](https://www.rust-lang.org/learn/get-started)  选择64bit，下载后的文件名为rustup-init.exe
 ![[Pasted image 20241105202801.png]]

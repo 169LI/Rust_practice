@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "a860713595ae6fa6",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "80bb43e1abb39a0f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rust学习笔记/Rust学习笔记.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Rust学习笔记"
-            }
-          }
-        ]
-      },
-      {
         "id": "0da9d659e6d14f1c",
         "type": "tabs",
         "children": [
@@ -193,10 +173,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "80bb43e1abb39a0f",
+  "active": "ad5b3a7de3cb81dc",
   "lastOpenFiles": [
-    "Rust学习笔记/image/Pasted image 20241105202526.png",
+    "image/Pasted.md",
     "Rust学习笔记/Rust学习笔记.md",
+    "Rust学习笔记/image/Pasted image 20241105202526.png",
     "image/pasted image 20241105202526.png.md",
     "image",
     "未命名.md",
@@ -211,7 +192,6 @@
     "Rust习题/第三章习题.md",
     "2024-11-06.md",
     "Rust学习笔记/image/Pasted image 20241105203605.png",
-    "Rust学习笔记/image/Pasted image 20241105203553.png",
     "Rust学习笔记/Rust学习笔记 1.md",
     "Rust学习笔记/image",
     "Rust学习笔记",
