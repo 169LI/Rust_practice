@@ -648,28 +648,26 @@ fn main(){
 Rust 的数组长度在编译时是固定的，因此不能在运行时动态改变数组的大小。
 
 ```
-fn main(){}
-let n = 5;
-let arr = [0; n];  // 错误：`n` 需要是常量
+fn main(){
+	let n = 5;
+	let arr = [0; n];  // 错误：`n` 需要是常量
+}
 ```
 
-为了处理大小动态的数组，Rust 提供了**向量（Vec）**类型，它在运行时可以动态增长或缩小。
+为了处理大小动态的数组，Rust 提供了**向量（Vec）类型，它在运行时可以动态增长或缩小。**
 
 ### 1.7.6 数组的不可变和可变引用的例子
 
 ```
 fn main() {
     let mut arr = [1, 2, 3];
-
     // 不可变借用
     let ref1 = &arr;  
     println!("ref1: {:?}", ref1);  // 引用数组，输出：[1, 2, 3]
-
     // 可变借用
     let ref2 = &mut arr;  
     ref2[0] = 42;  // 修改数组
     println!("ref2: {:?}", ref2);  // 引用修改后的数组，输出：[42, 2, 3]
-    
     // 再次使用不可变借用
     let ref3 = &arr;
     println!("ref3: {:?}", ref3);  // 引用修改后的数组，输出：[42, 2, 3]
@@ -691,8 +689,10 @@ fn main() {
 + 使用 vec! 宏    最简单的方式是使用 vec! 宏，它类似于数组字面量的语法，用于快速创建一个向量：
 
 ```
-let mut primes = vec![2, 3, 5, 7];  // 创建一个包含质数的向量
-assert_eq!(primes.iter().product::<i32>(), 210);  // 计算元素的乘积
+fn mian(){
+	let mut primes = vec![2, 3, 5, 7];  // 创建一个包含质数的向量
+	assert_eq!(primes.iter().product::<i32>(), 210);  // 计算元素的乘积
+}
 ```
 
  vec!\[2, 3, 5, 7] 创建一个包含指定元素的向量。
@@ -700,9 +700,12 @@ assert_eq!(primes.iter().product::<i32>(), 210);  // 计算元素的乘积
 + 动态添加元素    向量是动态可变的，我们可以使用 push 方法向向量添加元素：
 
 ```
-primes.push(11);  // 向向量添加元素
-primes.push(13);
-assert_eq!(primes.iter().product::<i32>(), 30030);  // 更新后的元素乘积
+fn mian(){
+	let mut primes = vec![2, 3, 5, 7];  // 创建一个包含质数的向量
+	primes.push(11);  // 向向量添加元素
+	primes.push(13);
+	assert_eq!(primes.iter().product::<i32>(), 30030);  // 更新后的元素乘积
+}
 ```
 
 + 创建具有重复值的向量    可以通过指定元素和重复次数来创建一个具有重复值的向量：
@@ -718,12 +721,14 @@ fn new_pixel_buffer(rows: usize, cols: usize) -> Vec<u8> {
 另外，也可以通过 Vec::new() 来创建一个空的向量，然后逐个添加元素：
 
 ```
-let mut pal = Vec::new();
-pal.push("step");
-pal.push("on");
-pal.push("no");
-pal.push("pets");
-assert_eq!(pal, vec!["step", "on", "no", "pets"]);
+fn main(){
+	let mut pal = Vec::new();
+	pal.push("step");
+	pal.push("on");
+	pal.push("no");
+	pal.push("pets");
+	assert_eq!(pal, vec!["step", "on", "no", "pets"]);
+}
 ```
 
 从迭代器创建向量
@@ -731,8 +736,10 @@ assert_eq!(pal, vec!["step", "on", "no", "pets"]);
 也可以从迭代器生成一个向量：
 
 ```
-let v: Vec<i32> = (0..5).collect();  // 使用 collect 将迭代器生成的值收集成向量
-assert_eq!(v, [0, 1, 2, 3, 4]);
+fn mian(){
+	let v: Vec<i32> = (0..5).collect();  // 使用 collect 将迭代器生成的值收集成向量
+	assert_eq!(v, [0, 1, 2, 3, 4]);	
+}
 ```
 
 - collect 方法根据上下文的类型推断，默认将结果收集为向量，但也可以指定其他类型的集合。
@@ -742,9 +749,11 @@ assert_eq!(v, [0, 1, 2, 3, 4]);
 虽然数组和向量在 Rust 中都是集合类型，数组的大小在编译时确定，而向量的大小在运行时动态变化。向量支持与切片类似的方法，比如 sort()、reverse() 等：
 
 ```
-let mut palindrome = vec!["a man", "a plan", "a canal", "panama"];
-palindrome.reverse();  // 反转向量
-assert_eq!(palindrome, vec!["panama", "a canal", "a plan", "a man"]);
+fn main(){
+	let mut palindrome = vec!["a man", "a plan", "a canal", "panama"];
+	palindrome.reverse();  // 反转向量
+	assert_eq!(palindrome, vec!["panama", "a canal", "a plan", "a man"]);
+}
 ```
 
 ### 1.8.3 向量的容量管理
@@ -755,17 +764,17 @@ assert_eq!(palindrome, vec!["panama", "a canal", "a plan", "a man"]);
 
 如果知道向量的初始大小，可以使用 Vec::with_capacity 来避免不必要的内存分配：
 ```
-let mut v = Vec::with_capacity(2);
-assert_eq!(v.len(), 0);
-assert_eq!(v.capacity(), 2);
-
-v.push(1);
-v.push(2);
-assert_eq!(v.len(), 2);
-assert_eq!(v.capacity(), 2);  // 容量保持 2
-
-v.push(3);
-println!("capacity is now {}", v.capacity());  // 容量通常会扩展为 4
+fn main(){
+	let mut v = Vec::with_capacity(2);
+	assert_eq!(v.len(), 0);
+	assert_eq!(v.capacity(), 2);
+	v.push(1);
+	v.push(2);
+	assert_eq!(v.len(), 2);
+	assert_eq!(v.capacity(), 2);  // 容量保持 2
+	v.push(3);
+	println!("capacity is now {}", v.capacity());  // 容量通常会扩展为 4
+}
 ```
 
  - capacity() 返回当前向量能够容纳的最大元素数，而不需要进行内存重新分配。
@@ -778,9 +787,12 @@ println!("capacity is now {}", v.capacity());  // 容量通常会扩展为 4
 可以在任意位置插入元素：
 
 ```
-let mut v = vec![10, 20, 30, 40, 50];
-v.insert(3, 35);  // 在索引为 3 的位置插入 35
-assert_eq!(v, [10, 20, 30, 35, 40, 50]);
+fn main(){
+
+
+
+}
+
 ```
 
 +  删除元素
