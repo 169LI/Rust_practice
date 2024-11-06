@@ -37,7 +37,7 @@
               "state": {
                 "file": "Rust学习笔记/Rust学习笔记.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "Rust学习笔记"
@@ -196,21 +196,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "048a1eefdc312215",
+  "active": "5d44bbc2c0238c93",
   "lastOpenFiles": [
-    "Rust习题/第三章习题未修正.md",
+    "Rust学习笔记/image/Rust学习笔记-020241106-1.png",
+    "Rust学习笔记/image/Rust学习笔记-020241106.png",
     "Rust学习笔记/Rust学习笔记.md",
+    "Rust学习笔记/image/Rust学习笔记-1.png",
+    "Rust学习笔记/image/Rust学习笔记.png",
+    "Rust学习笔记/image/Pasted_image_20241106164418.png",
+    "Rust习题/第三章习题未修正.md",
     "Rust学习笔记/image/Pasted image 20241106180246.png",
     "Rust学习笔记/image/Pasted_image_20241105202526.png",
     "Pasted_image_20241105202801.md",
-    "Rust学习笔记/image/Pasted_image_20241106164418.png",
     "Rust学习笔记/image/Pasted_image_20241105203927.png",
     "Rust学习笔记/image/Pasted_image_20241105203854.png",
     "Rust学习笔记/image/Pasted_image_20241105203729.png",
     "Rust学习笔记/image/Pasted_image_20241105203720.png",
-    "Rust学习笔记/image/Pasted_image_20241105203605.png",
-    "Rust学习笔记/image/Pasted_image_20241105203553.png",
-    "Rust学习笔记/image/Pasted_image_20241105203519.png",
     "Rust学习笔记/image",
     "Rust学习笔记/ｉｍａｇｅ",
     "Rust学习笔记/新建文件夹",
