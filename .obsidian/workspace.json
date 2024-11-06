@@ -4,21 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "105a744ef7b41dbd",
+        "id": "5497154f70fd00e7",
         "type": "tabs",
         "children": [
           {
-            "id": "29909ee87bbf4150",
+            "id": "e229e0578a5c821f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust习题/第三章习题.md",
+                "file": "Rust学习笔记/Rust学习笔记.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "第三章习题"
+              "title": "Rust学习笔记"
+            }
+          }
+        ]
+      },
+      {
+        "id": "4074fc815028c303",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aadbf9773a83a286",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rust学习笔记/Rust学习笔记.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Rust学习笔记"
             }
           }
         ]
@@ -77,8 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c82880c077da5b93",
@@ -140,10 +159,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust习题/第三章习题.md"
+                "file": "Rust学习笔记/Rust学习笔记.md"
               },
               "icon": "lucide-list",
-              "title": "第三章习题 的大纲"
+              "title": "Rust学习笔记 的大纲"
             }
           },
           {
@@ -161,8 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 457.5,
-    "collapsed": true
+    "width": 500.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -175,13 +193,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "29909ee87bbf4150",
+  "active": "e229e0578a5c821f",
   "lastOpenFiles": [
+    "Rust习题/第三章习题.md",
     "Rust学习笔记/Rust学习笔记.md",
     "未命名.md",
     "Rust学习笔记/image/Pasted image 20241105203927.png",
     "2024-11-06.md",
-    "Rust习题/第三章习题.md",
     "Rust学习笔记/image/Pasted image 20241105203854.png",
     "Rust学习笔记/image/Pasted image 20241105203729.png",
     "Rust学习笔记/image/Pasted image 20241105203720.png",
