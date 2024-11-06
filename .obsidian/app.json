@@ -10,5 +10,8 @@
     "downscalePercent": 100
   },
   "foldHeading": true,
-  "attachmentFolderPath": "./image"
+  "attachmentFolderPath": "./image",
+  "newLinkFormat": "relative",
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true
 }
