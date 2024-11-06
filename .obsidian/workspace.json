@@ -20,19 +20,8 @@
               "icon": "lucide-file",
               "title": "Rust学习笔记"
             }
-          },
-          {
-            "id": "0770e862e56ce4d6",
-            "type": "leaf",
-            "state": {
-              "type": "style-settings",
-              "state": {},
-              "icon": "gear",
-              "title": "Style Settings"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -149,9 +138,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Rust学习笔记/Rust学习笔记.md"
+              },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "Rust学习笔记 的大纲"
             }
           },
           {
@@ -183,7 +174,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0770e862e56ce4d6",
+  "active": "84aa519bc714ffbf",
   "lastOpenFiles": [
     "Rust学习笔记/Rust学习笔记.md",
     "未命名.md",
