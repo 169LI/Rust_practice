@@ -8,6 +8,7 @@ Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https:/
 + Rust 的编译工具依赖 C 语言的编译工具，这意味着你的电脑上至少已经存在一个 C 语言的编译环境。如果你使用的是 Linux 系统，往往已经具备了 GCC 或 clang。
 + 如果你使用的是 macOS，需要安装 Xcode。
 + 如果你是用的是 Windows 操作系统，你需要安装 Visual Studio 2013 或以上的环境（需要 C/C++ 支持）以使用 MSVC 或安装 MinGW + GCC 编译环境 
+
 ## 1 之前下载过vs2022 
 （没下过也不建议你下了     还不如开虚拟机用linux系统    或者用MinGW   vs2022有点大）
 ![|450](image/Pasted_image_20241105202526.png)
@@ -17,22 +18,24 @@ Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https:/
 ## 3 运行rustup-init.exe
 ![|450](image/Pasted_image_20241105203307.png)
 上图显示的是一个命令行安装向导。
+
 如果你已经安装 MSVC （推荐），那么安装过程会非常的简单，输入 1 并回车，直接进入第二步。
 ![|475](image/Pasted_image_20241105203332.png)
- 后面可能会使用GNU（没有安装MSVC或者后续准备使用GNU）
+ 后面可能会使用GNU,k（没有安装MSVC或者后续准备使用GNU）
+ 
 如果你安装的是 MinGW，那么你需要输入 2 （自定义安装），然后系统会询问你 Default host triple? ，请将上图中 default host triple 的 "msvc" 改为 "gnu" 再输入安装程序
 ![|450](image/Pasted_image_20241105203348.png)
 设置完所有选项，会回到安装向导界面（第一张图），这是我们输入 1 并回车即可
 ## 4 测试
 `rustc -V        # 注意的大写的 V`
 
-![|475](image/Pasted_image_20241105203418.png)
+![|550](image/Pasted_image_20241105203418.png)
 ## 5 Visual Studio Code 开发环境
 analyzer 和 Native Debug 两个扩展   之后重启  选择一个新的文件夹
 
-![|282](image/Pasted_image_20241105203442.png)
+![|332](image/Pasted_image_20241105203442.png)
 
-![|245](image/Pasted_image_20241105203450.png)
+![|320](image/Pasted_image_20241105203450.png)
 
  选择菜单栏中的"终端"-"新建终端"，会打开一个新的终端并输入命令：
 ```
@@ -51,7 +54,7 @@ cd ./greeting
 cargo build
 cargo run
 ```
-![|400](image/Pasted_image_20241105203519.png)
+![|550](image/Pasted_image_20241105203519.png)
 成功的构建了一个 Rust 命令行程序！
 ## 6 调试（debug）
 自带的那个是真不好用     自己配的这个也没好到哪里！  Rust后面会调试应该可能可以学快点（学c++不会调试直接凉一半）

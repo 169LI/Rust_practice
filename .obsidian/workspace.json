@@ -6,7 +6,7 @@
       {
         "id": "83d1ee3f70373a48",
         "type": "tabs",
-        "dimension": 45.956112852664575,
+        "dimension": 42.62922782386726,
         "children": [
           {
             "id": "048a1eefdc312215",
@@ -27,7 +27,7 @@
       {
         "id": "725887064fb6b122",
         "type": "tabs",
-        "dimension": 54.043887147335425,
+        "dimension": 57.37077217613273,
         "children": [
           {
             "id": "5d44bbc2c0238c93",
@@ -183,7 +183,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 362.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,7 +197,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b9e78e251e1ef3a5",
+  "active": "5d44bbc2c0238c93",
   "lastOpenFiles": [
     "Rust学习笔记/image/Rust学习笔记-020241106-1.png",
     "Rust学习笔记/Rust学习笔记.md",
