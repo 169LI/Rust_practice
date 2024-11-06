@@ -160,7 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 528.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,7 +173,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ad5b3a7de3cb81dc",
+  "active": "b9e78e251e1ef3a5",
   "lastOpenFiles": [
     "image/Pasted.md",
     "Rust学习笔记/Rust学习笔记.md",
