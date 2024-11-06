@@ -1,6 +1,7 @@
 # 搭建开发环境
-首先，需要安装最新版的 Rust 编译工具和 Visual Studio Code。
-Rust 编译工具：[安装 Rust - Rust 程序设计语言](https://www.rust-lang.org/zh-CN/tools/install)
+   首先，需要安装最新版的 Rust 编译工具和 Visual Studio Code。
+
+&ensp;&ensp;Rust 编译工具：[安装 Rust - Rust 程序设计语言](https://www.rust-lang.org/zh-CN/tools/install)
 Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download)
 Rust 的编译工具依赖 C 语言的编译工具，这意味着你的电脑上至少已经存在一个 C 语言的编译环境。如果你使用的是 Linux 系统，往往已经具备了 GCC 或 clang。如果你使用的是 macOS，需要安装 Xcode。如果你是用的是 Windows 操作系统，你需要安装 Visual Studio 2013 或以上的环境（需要 C/C++ 支持）以使用 MSVC 或安装 MinGW + GCC 编译环境
 ## 1下载过vs2022 
