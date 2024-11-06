@@ -1,6 +1,6 @@
 # 搭建开发环境
 首先，需要安装最新版的 Rust 编译工具和 Visual Studio Code
-
+![[image/Pasted image 20241106180246.png]]
 Rust 编译工具：[安装 Rust - Rust 程序设计语言](https://www.rust-lang.org/zh-CN/tools/install)
 
 Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download)
@@ -31,8 +31,11 @@ rustc -V        # 注意的大写的 V
 ![](image/Pasted_image_20241105203418.png)
 ## 5 Visual Studio Code 开发环境
 analyzer 和 Native Debug 两个扩展   之后重启  选择一个新的文件夹
+
 ![](image/Pasted_image_20241105203442.png)
+
 ![](image/Pasted_image_20241105203450.png)
+
  选择菜单栏中的"终端"-"新建终端"，会打开一个新的终端并输入命令：
 ```
  创建新项目：cargo new <项目名>
