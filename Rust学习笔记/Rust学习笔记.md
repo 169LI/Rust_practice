@@ -11,7 +11,7 @@ Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https:/
 
 ## 1 下载过vs2022 
 （没下过也不建议你下了   还不如开虚拟机用linux系统）
-![](Pasted_image_20241105202526.png)
+![](image/Pasted_image_20241105202526.png)
 ## 2 rust 编译工具
 官方下载地址: [rust](https://www.rust-lang.org/learn/get-started)  选择64bit，下载后的文件名为rustup-init.exe
 ![](Pasted_image_20241105202801)
