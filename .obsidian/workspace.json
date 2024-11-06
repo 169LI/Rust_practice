@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "5497154f70fd00e7",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "e229e0578a5c821f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rust学习笔记/Rust学习笔记.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Rust学习笔记"
-            }
-          }
-        ]
-      },
-      {
         "id": "a860713595ae6fa6",
         "type": "tabs",
         "children": [
@@ -97,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 546.5,
+    "collapsed": true
   },
   "right": {
     "id": "c82880c077da5b93",
@@ -180,8 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 246.5,
-    "collapsed": true
+    "width": 246.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,20 +176,20 @@
   },
   "active": "80bb43e1abb39a0f",
   "lastOpenFiles": [
+    "Rust学习笔记/image/Pasted image 20241106164418.png",
     "Rust学习笔记/Rust学习笔记.md",
+    "Rust学习笔记/image/Pasted image 20241105203927.png",
+    "Rust学习笔记/image/Pasted image 20241105203854.png",
+    "Rust学习笔记/image/Pasted image 20241105203720.png",
+    "Rust学习笔记/image/Pasted image 20241105203729.png",
+    "Rust学习笔记/image/Pasted image 20241105203450.png",
+    "Rust学习笔记/image/Pasted image 20241105203418.png",
+    "Rust学习笔记/image/Pasted image 20241105203442.png",
     "Rust习题/第三章习题.md",
     "未命名.md",
-    "Rust学习笔记/image/Pasted image 20241105203927.png",
     "2024-11-06.md",
-    "Rust学习笔记/image/Pasted image 20241105203854.png",
-    "Rust学习笔记/image/Pasted image 20241105203729.png",
-    "Rust学习笔记/image/Pasted image 20241105203720.png",
     "Rust学习笔记/image/Pasted image 20241105203605.png",
     "Rust学习笔记/image/Pasted image 20241105203553.png",
-    "Rust学习笔记/image/Pasted image 20241105203519.png",
-    "Rust学习笔记/image/Pasted image 20241105203450.png",
-    "Rust学习笔记/image/Pasted image 20241105203442.png",
-    "Rust学习笔记/image/Pasted image 20241105203418.png",
     "Rust学习笔记/Rust学习笔记 1.md",
     "Rust学习笔记/image",
     "Rust学习笔记",

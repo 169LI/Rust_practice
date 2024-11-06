@@ -8,13 +8,13 @@ Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https:/
 + Rust 的编译工具依赖 C 语言的编译工具，这意味着你的电脑上至少已经存在一个 C 语言的编译环境。如果你使用的是 Linux 系统，往往已经具备了 GCC 或 clang。
 + 如果你使用的是 macOS，需要安装 Xcode。
 + 如果你是用的是 Windows 操作系统，你需要安装 Visual Studio 2013 或以上的环境（需要 C/C++ 支持）以使用 MSVC 或安装 MinGW + GCC 编译环境
-## 1下载过vs2022 
+## 1 下载过vs2022 
 （没下过也不建议你下了   还不如开虚拟机用linux系统）
 ![[Pasted image 20241105202526.png]]
-## 2rust 编译工具
+## 2 rust 编译工具
 官方下载地址: [rust](https://www.rust-lang.org/learn/get-started)  选择64bit，下载后的文件名为rustup-init.exe
 ![[Pasted image 20241105202801.png]]
-## 3运行rustup-init.exe
+## 3 运行rustup-init.exe
 ![[Pasted image 20241105203307.png]]
 上图显示的是一个命令行安装向导。
 如果你已经安装 MSVC （推荐），那么安装过程会非常的简单，输入 1 并回车，直接进入第二步。
@@ -23,12 +23,12 @@ Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https:/
 如果你安装的是 MinGW，那么你需要输入 2 （自定义安装），然后系统会询问你 Default host triple? ，请将上图中 default host triple 的 "msvc" 改为 "gnu" 再输入安装程序
 ![[Pasted image 20241105203348.png]]
 设置完所有选项，会回到安装向导界面（第一张图），这是我们输入 1 并回车即可
-## 4测试
+## 4 测试
 ```
 rustc -V        # 注意的大写的 V
 ```
 ![[Pasted image 20241105203418.png]]
-## 5Visual Studio Code 开发环境
+## 5 Visual Studio Code 开发环境
 analyzer 和 Native Debug 两个扩展   之后重启  选择一个新的文件夹
 ![[Pasted image 20241105203442.png]]
 ![[Pasted image 20241105203450.png]]
@@ -82,7 +82,7 @@ cargo run
 ## 7 卸载
 要卸载 Rust 和 rustup，在终端执行以下命令即可卸载：
 `rustup self uninstall（不建议卸载）`
-## 8本地文档
+## 8 本地文档
 安装 Rust 的同时也会在本地安装一个文档服务，方便我们离线阅读：运行
 ```
  rustup doc
@@ -95,7 +95,7 @@ cargo run
 target
 .gitignore
 ```
-# 一.数据类型
+# 一. 数据类型
 本章从简单的数值类型（如整数和浮点值）开始，后面转而介绍包含更多数据的类型：Box、元组（tuple）、数组和字符串。
 
  **固定数值类型（整型+浮点型）**
@@ -335,7 +335,7 @@ fn main() {
     assert!(xyz.0 + xyz.1 == xyz.2);
 }
 ```
-
+![[Pasted image 20241106164418.png]]
 对 f32 类型做加法时，0.1 + 0.2 的结果是 3e99999a，0.3 也是 3e99999a，因此 f32 下的 0.1 + 0.2 == 0.3 通过测试。
 
 f64 类型时，结果就不一样了，因为 f64 精度高很多，因此在小数点非常后面发生了一点微小的变化，0.1 + 0.2 以 4 结尾，但是 0.3 以3结尾，这个细微区别导致 f64 下的测试失败了，并且抛出了异常。
@@ -450,12 +450,12 @@ fn main() {
 	- 
 ```
 	fn  main(){
-	let text = "I see the eigenvalue in thine eye";
-	let temp = text.split_at(21);
-	let head = temp.0;
-	let tail = temp.1;
-	assert_eq!(head, "I see the eigenvalue ");
-	assert_eq!(tail, "in thine eye");
+		let text = "I see the eigenvalue in thine eye";
+		let temp = text.split_at(21);
+		let head = temp.0;
+		let tail = temp.1;
+		assert_eq!(head, "I see the eigenvalue ");
+		assert_eq!(tail, "in thine eye");
 	}
 ```
 还有一个常用的元组类型是**零元组 ()**。传统上，这叫作单元类型，因为此类型只有 一个值，写作 ( )。
