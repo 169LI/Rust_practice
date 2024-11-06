@@ -4,9 +4,9 @@
     "type": "split",
     "children": [
       {
-        "id": "2b1b700c2f02235f",
+        "id": "83d1ee3f70373a48",
         "type": "tabs",
-        "dimension": 39.92161254199328,
+        "dimension": 45.956112852664575,
         "children": [
           {
             "id": "048a1eefdc312215",
@@ -15,7 +15,7 @@
               "type": "markdown",
               "state": {
                 "file": "Rust学习笔记/Rust学习笔记.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -25,9 +25,9 @@
         ]
       },
       {
-        "id": "d97817c360c3071e",
+        "id": "725887064fb6b122",
         "type": "tabs",
-        "dimension": 60.07838745800672,
+        "dimension": 54.043887147335425,
         "children": [
           {
             "id": "5d44bbc2c0238c93",
@@ -74,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:Rust习题 path:Rust学习笔记 tag:",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,

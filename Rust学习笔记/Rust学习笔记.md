@@ -1,22 +1,19 @@
 vscode+Rsut+\<Rust语言圣经>+\<Rust程序设计第二版>+obsidian(笔记)+github(代码仓库)
-
+# obsidian+github
 # 搭建开发环境
 首先，需要安装最新版的 Rust 编译工具和 Visual Studio Code
-
 Rust 编译工具：[安装 Rust ](https://www.rust-lang.org/zh-CN/tools/install)
-
 Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download)
 
 + Rust 的编译工具依赖 C 语言的编译工具，这意味着你的电脑上至少已经存在一个 C 语言的编译环境。如果你使用的是 Linux 系统，往往已经具备了 GCC 或 clang。
 + 如果你使用的是 macOS，需要安装 Xcode。
 + 如果你是用的是 Windows 操作系统，你需要安装 Visual Studio 2013 或以上的环境（需要 C/C++ 支持）以使用 MSVC 或安装 MinGW + GCC 编译环境 
-
-## 1 下载过vs2022 
-（没下过也不建议你下了   还不如开虚拟机用linux系统）
+## 1 之前下载过vs2022 
+（没下过也不建议你下了     还不如开虚拟机用linux系统    或者用MinGW   vs2022有点大）
 ![](image/Pasted_image_20241105202526.png)
 ## 2 rust 编译工具
 官方下载地址: [rust](https://www.rust-lang.org/learn/get-started)  选择64bit，下载后的文件名为rustup-init.exe
-![](image/Pasted_image_20241105202801.png)
+![](image/Pasted_image_20241105202801.png =20x30)
 ## 3 运行rustup-init.exe
 ![](image/Pasted_image_20241105203307.png)
 上图显示的是一个命令行安装向导。
@@ -104,14 +101,16 @@ target
 # 一. 数据类型
 本章从简单的数值类型（如整数和浮点值）开始，后面转而介绍包含更多数据的类型：Box、元组（tuple）、数组和字符串。
 
- **固定数值类型（整型+浮点型）**
-Rust 中数值类型的名称都遵循着一种统一的模式，类型定义的形式统一为：有无符号 + 类型大小(位数)。
+ >**固定数值类型（整型+浮点型）**
+ >Rust 中数值类型的名称都遵循着一种统一的模式，类型定义的形式统一为：有无符号 + 类型大小(位数)。
 ![](image/Pasted_image_20241105203720.png)
 机器字是一个值，其大小等于运行此代码的机器上“地址”的大小，可能是 32 位，也可能是 64 位。
 
 默认情况下，12.0 将表示 64 位浮点数 12表示有符号32位整数。
 
 `let x = -10.abs(); // 错误
+`
+
 方法调用的优先级高于前缀运算符，因此在对负值进行方法调用时，请务必正确地加上圆括号。
 ## 1.1 整型（Integer）
 整数型简称整型，按照比特位长度和有无符号分为以下种类
@@ -1303,4 +1302,4 @@ fn decode(data: &Bytes) {
 ...
 }
 ```
-#二.所有权与移动
+# 二.
