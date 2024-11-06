@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Rust学习笔记/Rust学习笔记.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -173,7 +173,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b9e78e251e1ef3a5",
+  "active": "0ef29e661254fc8a",
   "lastOpenFiles": [
     "Pasted_image_20241105202801.md",
     "Rust学习笔记/Rust学习笔记.md",
