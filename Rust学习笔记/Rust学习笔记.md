@@ -448,21 +448,19 @@ fn main() {
 
 ### 1.5.2用 . 来访问元组
 
-Rust 提供了 . 的访问方式：和其它语言的数组、字符串一样，元组的索引从 0 开始。
+Rust 提供了 **. 的访问方式**：和其它语言的数组、字符串一样，元组的索引从 0 开始。
 
 ```
 fn main() {
     let x: (i32, f64, u8) = (500, 6.4, 1);
-
     let five_hundred = x.0;
-
     let six_point_four = x.1;
-
     let one = x.2;
 }
 ```
 
-let hello = String::from("Hola"); 这行代码来说，Hola 的长度是 4 个字节，因为 "Hola" 中的每个字母在 UTF-8 编码中仅占用 1 个字节，但是对于下面的代码呢？
+`let hello = String::from("Hola");` 
+对这行代码来说，Hola 的长度是 4 个字节，因为 "Hola" 中的每个字母在 UTF-8 编码中仅占用 1 个字节，但是对于下面的代码呢？
 
 ### 1.5.3元组的使用示例
 
