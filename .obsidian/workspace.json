@@ -20,8 +20,19 @@
               "icon": "lucide-file",
               "title": "Rust学习笔记"
             }
+          },
+          {
+            "id": "0770e862e56ce4d6",
+            "type": "leaf",
+            "state": {
+              "type": "style-settings",
+              "state": {},
+              "icon": "gear",
+              "title": "Style Settings"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -138,11 +149,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Rust学习笔记/Rust学习笔记.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Rust学习笔记 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -160,7 +169,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 324.5
+    "width": 324.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,10 +183,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4b9f5836e32f886b",
+  "active": "0770e862e56ce4d6",
   "lastOpenFiles": [
-    "2024-11-06.md",
     "Rust学习笔记/Rust学习笔记.md",
+    "未命名.md",
+    "2024-11-06.md",
     "Rust习题/第三章习题.md",
     "Rust学习笔记/image/Pasted image 20241105203927.png",
     "Rust学习笔记/image/Pasted image 20241105203854.png",
@@ -191,7 +202,6 @@
     "Rust学习笔记/Rust学习笔记 1.md",
     "Rust学习笔记/image",
     "Rust学习笔记",
-    "未命名.md",
     "Rust习题",
     "未命名.canvas",
     "未命名 1.canvas",
