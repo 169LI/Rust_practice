@@ -5,14 +5,14 @@ Rust 编译工具：[安装 Rust - Rust 程序设计语言](https://www.rust-lan
 
 Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download)
 
-Rust 的编译工具依赖 C 语言的编译工具，这意味着你的电脑上至少已经存在一个 C 语言的编译环境。如果你使用的是 Linux 系统，往往已经具备了 GCC 或 clang。如果你使用的是 macOS，需要安装 Xcode。如果你是用的是 Windows 操作系统，你需要安装 Visual Studio 2013 或以上的环境（需要 C/C++ 支持）以使用 MSVC 或安装 MinGW + GCC 编译环境
++ Rust 的编译工具依赖 C 语言的编译工具，这意味着你的电脑上至少已经存在一个 C 语言的编译环境。如果你使用的是 Linux 系统，往往已经具备了 GCC 或 clang。
++ 如果你使用的是 macOS，需要安装 Xcode。
++ 如果你是用的是 Windows 操作系统，你需要安装 Visual Studio 2013 或以上的环境（需要 C/C++ 支持）以使用 MSVC 或安装 MinGW + GCC 编译环境
 ## 1下载过vs2022 
 （没下过也不建议你下了   还不如开虚拟机用linux系统）
-
 ![[Pasted image 20241105202526.png]]
 ## 2rust 编译工具
-官方下载地址: [rust](https://www.rust-lang.org/learn/get-started)  
-选择64bit，下载后的文件名为rustup-init.exe
+官方下载地址: [rust](https://www.rust-lang.org/learn/get-started)  选择64bit，下载后的文件名为rustup-init.exe
 ![[Pasted image 20241105202801.png]]
 ## 3运行rustup-init.exe
 ![[Pasted image 20241105203307.png]]
@@ -20,7 +20,6 @@ Rust 的编译工具依赖 C 语言的编译工具，这意味着你的电脑上
 如果你已经安装 MSVC （推荐），那么安装过程会非常的简单，输入 1 并回车，直接进入第二步。
 ![[Pasted image 20241105203332.png]]
  后面可能会使用GNU（没有安装MSVC或者后续准备使用GNU）
- 
 如果你安装的是 MinGW，那么你需要输入 2 （自定义安装），然后系统会询问你 Default host triple? ，请将上图中 default host triple 的 "msvc" 改为 "gnu" 再输入安装程序
 ![[Pasted image 20241105203348.png]]
 设置完所有选项，会回到安装向导界面（第一张图），这是我们输入 1 并回车即可
@@ -44,8 +43,7 @@ analyzer 和 Native Debug 两个扩展   之后重启  选择一个新的文�
  测试项目：cargo test
 ```
 
-cargo new greeting  会自动构建一个名叫 greeting 的 Rust 工程目录
-现在在终端里输入以下三个命令：
+cargo new greeting  会自动构建一个名叫 greeting 的 Rust 工程目录。现在在终端里输入以下三个命令：
 ```
 cd ./greeting
 cargo build
@@ -53,7 +51,7 @@ cargo run
 ```
 ![[Pasted image 20241105203519.png]]
 成功的构建了一个 Rust 命令行程序！
-## 6调试（debug）
+## 6 调试（debug）
 自带的那个是真不好用     自己配的这个也没好到哪里！  Rust后面会调试应该可能可以学快点（学c++不会调试直接凉一半）
 ![[Pasted image 20241105203553.png]]直接粘贴就ok了
 ![[Pasted image 20241105203605.png]]
@@ -81,9 +79,9 @@ cargo run
     ]
 }
 ```
-## 7卸载
+## 7 卸载
 要卸载 Rust 和 rustup，在终端执行以下命令即可卸载：
-rustup self uninstall（不建议卸载）
+`rustup self uninstall（不建议卸载）`
 ## 8本地文档
 安装 Rust 的同时也会在本地安装一个文档服务，方便我们离线阅读：运行
 ```
@@ -100,7 +98,13 @@ target
 # 一.数据类型
 本章从简单的数值类型（如整数和浮点值）开始，转而介绍包含更多数据的类型：Box、元组（tuple）、数组和字符串。<span style="color:red">（此处需要后续补充后续详细章节链接）</span>
 
+|     |     |
+| --- | --- |
+|     |     |
 
+
+
+**固定数值类型（整数+浮点数）**
 Rust 中数值类型的名称都遵循着一种统一的模式，类型定义的形式统一为：有无符号 + 类型大小(位数)。
 ![[Pasted image 20241105203720.png]]
 机器字是一个值，其大小等于运行此代码的机器上“地址”的大小，可能是 32 位，也可能是 64 位。
