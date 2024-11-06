@@ -958,7 +958,7 @@ let poodles = "ಠ_ಠ";                 // 字符串字面量
 let hello = String::from("中国人");
 ```
 
-如果问你该字符串多长，你可能会说 3，但是实际上是 9 个字节的长度，因为大部分常用汉字在 UTF-8 中的长度是 3 个字节，因此这种情况下对 hello 进行索引，访问 &hello\[0] 没有任何意义，因为你取不到 中 这个字符，而是取到了这个字符三个字节中的第一个字节.<span style="color:red">（需要补充代码）</span>
+如果问你该字符串多长，你可能会说 3，但是实际上是 9 个字节的长度，因为大部分常用汉字在 UTF-8 中的长度是 3 个字节，因此这种情况下对 hello 进行索引，访问 &hello\[0] 没有任何意义，因为你取不到 中 这个字符，而是取到了这个字符三个字节中的第一个字节.<span style="color:red">（需要补充代码说明）</span>
 
 ### 1.9.4 String 类型
 
@@ -968,11 +968,13 @@ String 是一个可变的、在堆上分配内存的字符串类型。它与 Vec
 	 - 使用  format! 宏生成新的 String：
 	 - 连接多个字符串：
 ```
-let error_message = "too many pets".to_string();
-let formatted_string = format!("{}°{:02}′{:02}″N", 24, 5, 23);
-let bits = vec!["veni", "vidi", "vici"];
-assert_eq!(bits.concat(), "venividivici");
-assert_eq!(bits.join(", "), "veni, vidi, vici");
+fn main(){
+	let error_message = "too many pets".to_string();
+	let formatted_string = format!("{}°{:02}′{:02}″N", 24, 5, 23);
+	let bits = vec!["veni", "vidi", "vici"];
+	assert_eq!(bits.concat(), "venividivici");
+	assert_eq!(bits.join(", "), "veni, vidi, vici");
+}
 ```
 
 那么如何将 String 类型转为 &str 类型呢？答案很简单，取引用即可：
@@ -994,7 +996,7 @@ fn say_hello(s: &str) {
 
 ### 1.9.5 使用字符串
 
-Rust 字符串类型支持许多操作，包括比较、查找、替换和拆分 追加、插入、替换、删除、连接等。
+Rust 字符串类型支持许多操作，包括**比较、查找、替换和拆分 追加、插入、替换、删除、连接**等。
 
 字符串比较
 
@@ -1023,11 +1025,10 @@ for word in "veni, vidi, vici".split(", ") { assert!(word.starts_with("v")); }
 ```
 
 + 追加（Push）
-
-push(): 向字符串尾部追加一个字符（char）。
-
-- push_str(): 向字符串尾部追加一个字符串字面量（&str）。
-- 这两个方法会直接修改原有字符串，因此需要使用 mut 修饰字符串变量。
+   *  push(): 向字符串尾部追加一个字符（char）。
+   * push_str(): 向字符串尾部追加一个字符串字面量（&str）。
+   
+这两个方法会直接修改原有字符串，因此需要使用 mut 修饰字符串变量。
 
 ```
 fn main() {
@@ -1131,9 +1132,9 @@ fn main() {
 
 ### 1.9.6 其他类似字符串的类型
 
-Rust 提供了多种类似字符串的类型，处理不同的场景，特别是当与非 UTF-8 数据或系统进行互操作时：
+Rust 提供了多种类似字符串的类型，处理不同的场景，特别是当与非 UTF-8 数据或系统进行互操作时：<span style="color:red">（h）</span>
 - PathBuf 和 Path：用于处理文件路径。
-- Vec 和 &[u8]：用于处理二进制数据。
+- Vec 和 &\[u8]：用于处理二进制数据。
 - OsString 和 &OsStr：用于处理操作系统特有的字符串（如环境变量名、命令行参数）。
 - CString 和 &CStr：用于与 C 语言的 null 结尾字符串进行互操作。
 
