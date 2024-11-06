@@ -224,21 +224,20 @@ fn main(){
 
 &ensp;&ensp;&ensp;还有除法 、移位置等操作的溢出判断，这里不在演示。不过大家可以来看一下原文档里面是怎末说的(除法为例)：
 
+|      |      |                                       |     |
+| ---- | ---- | ------------------------------------- | --- |
+| 运算   | 名称后缀 | 例子                                    |     |
+| 加法   | add  | 100_i8.checked_add(27) == Some(127)   |     |
+| 减法   | sub  | 10_u8.checked_sub(11) == None         |     |
+| 乘法   | mul  | 128_u8.saturating_mul(3) == 255       |     |
+| 除法   | div  | 64_u16.wrapping_div(8) == 8           |     |
+| 求余   | rem  | (-32768_i16).wrapping_rem(-1) == 0    |     |
+| 取负   | neg  | (-128_i8).checked_neg() == None       |     |
+| 绝对值  | abs  | (-32768_i16).wrapping_abs() == -32768 |     |
+| 求幂   | pow  | 3_u8.checked_pow(4) == Some(81)       |     |
+| 按位左移 | shl  | 10_u32.wrapping_shl(34) == 40         |     |
+| 按位右移 | shr  | 40_u64.wrapping_shr(66) == 10         |     |
 
-
-|      |      |                                       |
-| ---- | ---- | ------------------------------------- |
-| 运算   | 名称后缀 | 例子                                    |
-| 加法   | add  | 100_i8.checked_add(27) == Some(127)   |
-| 减法   | sub  | 10_u8.checked_sub(11) == None         |
-| 乘法   | mul  | 128_u8.saturating_mul(3) == 255       |
-| 除法   | div  | 64_u16.wrapping_div(8) == 8           |
-| 求余   | rem  | (-32768_i16).wrapping_rem(-1) == 0    |
-| 取负   | neg  | (-128_i8).checked_neg() == None       |
-| 绝对值  | abs  | (-32768_i16).wrapping_abs() == -32768 |
-| 求幂   | pow  | 3_u8.checked_pow(4) == Some(81)       |
-| 按位左移 | shl  | 10_u32.wrapping_shl(34) == 40         |
-| 按位右移 | shr  | 40_u64.wrapping_shr(66) == 10         |
 
 ### 1.1.3 数字运算
 
@@ -258,6 +257,7 @@ fn main() {
 }
 ```
 许多运算符号之后加上 = 号是自运算的意思，例如：sum += 1 等同于 sum = sum + 1。（涉及**所有权问题需注意**）<span style="color:red">（代码补充）</span>
+
 
 **注意**：Rust **不支持 ++ 和 --**，因为这两个运算符出现在变量的前后会影响代码可读性，减弱了开发者对变量改变的意识能力。
 

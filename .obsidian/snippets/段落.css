@@ -1,0 +1,14 @@
+/* 全文所有空白行优化 */
+.is-live-preview [class="cm-active cm-line"] {
+    transition: 0.5s line-height;
+}
+
+div:not(.cm-active).cm-line:has(> br) {
+    line-height: 0.4;
+    transition: 0.5s line-height, 0.5s background-color;
+    border-radius: var(--radius-s);
+}
+
+div:not(.cm-active).cm-line:has(> br):hover {
+    background-color: hsla(var(--color-accent-hsl), 0.4);
+}
