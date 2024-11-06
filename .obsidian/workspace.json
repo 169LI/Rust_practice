@@ -6,6 +6,7 @@
       {
         "id": "5497154f70fd00e7",
         "type": "tabs",
+        "dimension": 42.68808114961961,
         "children": [
           {
             "id": "e229e0578a5c821f",
@@ -26,6 +27,7 @@
       {
         "id": "4074fc815028c303",
         "type": "tabs",
+        "dimension": 57.31191885038038,
         "children": [
           {
             "id": "aadbf9773a83a286",
@@ -180,7 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 500.5
+    "width": 246.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,7 +195,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e229e0578a5c821f",
+  "active": "aadbf9773a83a286",
   "lastOpenFiles": [
     "Rust习题/第三章习题.md",
     "Rust学习笔记/Rust学习笔记.md",
