@@ -1,3 +1,4 @@
+vscode+Rsut+obsidian+\<Rust语言圣经>+\
 # 搭建开发环境
 首先，需要安装最新版的 Rust 编译工具和 Visual Studio Code
 
