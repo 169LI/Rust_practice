@@ -21,15 +21,18 @@ Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https:/
 
 如果你已经安装 MSVC （推荐），那么安装过程会非常的简单，输入 1 并回车，直接进入第二步。
 ![|475](image/Pasted_image_20241105203332.png)
- 后面可能会使用GNU,k（没有安装MSVC或者后续准备使用GNU）
+没有安装MSVC或者后续准备使用GNU得处理方法（ 后面可能会使用GNU,可能还得弄）
  
-如果你安装的是 MinGW，那么你需要输入 2 （自定义安装），然后系统会询问你 Default host triple? ，请将上图中 default host triple 的 "msvc" 改为 "gnu" 再输入安装程序
+如果你安装的是 MinGW，那么你需要输入 2 （自定义安装），然后系统会询问你 Default host triple? 请将上图中 default host triple 的 "msvc" 改为 "gnu" 再输入安装程序。
 ![|450](image/Pasted_image_20241105203348.png)
-设置完所有选项，会回到安装向导界面（第一张图），这是我们输入 1 并回车即可
+设置完所有选项，会回到安装向导界面（第一张图），这是我们输入 1 并回车即可。
 ## 4 测试
+
 `rustc -V        # 注意的大写的 V`
 
 ![|550](image/Pasted_image_20241105203418.png)
+成功配置
+
 ## 5 Visual Studio Code 开发环境
 analyzer 和 Native Debug 两个扩展   之后重启  选择一个新的文件夹
 
@@ -57,9 +60,14 @@ cargo run
 ![|550](image/Pasted_image_20241105203519.png)
 成功的构建了一个 Rust 命令行程序！
 ## 6 调试（debug）
-自带的那个是真不好用     自己配的这个也没好到哪里！  Rust后面会调试应该可能可以学快点（学c++不会调试直接凉一半）
-![](image/Pasted_image_20241105203553.png)直接粘贴就ok了
+自带的那个是真不好用     自己配的这个也没好到哪里！  Rust后面会调试应该可能可以学快点，我也不清楚（学c++不会调试直接凉一半）
+
+![](image/Pasted_image_20241105203553.png)
+
 ![](image/Pasted_image_20241105203605.png)
+
+直接粘贴下面的内容就ok了
+
 ```
 {
 
@@ -86,16 +94,22 @@ cargo run
 ```
 ## 7 卸载
 要卸载 Rust 和 rustup，在终端执行以下命令即可卸载：
-`rustup self uninstall（不建议卸载）`
+
+`rustup self uninstall（建议不要试）`
+
 ## 8 本地文档
-安装 Rust 的同时也会在本地安装一个文档服务，方便我们离线阅读：运行
+
+安装 Rust 的同时也会在本地安装一个文档服务，方便我们离线阅读：运行下面命令
 ```
  rustup doc
  cargo doc --help
 ```
- 让浏览器打开本地文档。
+ 用浏览器打开本地文档即可查看
+
+编程语言的学习尽头从不是书籍和视频教学中获取的知识而是能看懂懂官方文档的能力
+
 ## 9  .gitignore文件
- 如果有上传github需求  建议加一个.gitignore文件  把不想上传的文件写进去。他的target（编译的文件都在里面放）一直需要上传 真的很烦。
+ 如果有上传github需求  建议加一个.gitignore文件  把不想上传的文件写进去。他的target文件夹（编译的文件都在里面放）一运行就显示红色提示我上传   真的很烦。
 ```
 target
 .gitignore
@@ -107,11 +121,8 @@ target
  >Rust 中数值类型的名称都遵循着一种统一的模式，类型定义的形式统一为：有无符号 + 类型大小(位数)。
 ![](image/Pasted_image_20241105203720.png)
 机器字是一个值，其大小等于运行此代码的机器上“地址”的大小，可能是 32 位，也可能是 64 位。
-
 默认情况下，12.0 将表示 64 位浮点数 12表示有符号32位整数。
-
-`let x = -10.abs(); // 错误
-`
+`let x = -10.abs(); // 错误`
 
 方法调用的优先级高于前缀运算符，因此在对负值进行方法调用时，请务必正确地加上圆括号。
 ## 1.1 整型（Integer）
