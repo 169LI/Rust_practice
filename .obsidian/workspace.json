@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "第三章习题.md",
+                "file": "Rust学习笔记/Rust学习笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "第三章习题 的反向链接列表"
+              "title": "Rust学习笔记 的反向链接列表"
             }
           },
           {
@@ -156,11 +156,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 464.5
+    "width": 324.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,7 +173,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d31d8b3a9c10c812",
+  "active": "4b9f5836e32f886b",
   "lastOpenFiles": [
     "2024-11-06.md",
     "Rust学习笔记/Rust学习笔记.md",
