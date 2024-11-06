@@ -459,7 +459,7 @@ fn main() {
 ```
 
 `let hello = String::from("Hola");` 
-对这行代码来说，Hola 的长度是 4 个字节，因为 "Hola" 中的每个字母在 UTF-8 编码中仅占用 1 个字节，但是对于下面的代码呢？
+对这行代码来说，Hola 的长度是 4 个字节，因为 "Hola" 中的每个字母在 UTF-8 编码中仅占用 1 个字节。
 
 ### 1.5.3元组的使用示例
 
@@ -480,13 +480,13 @@ calculate_length 函数接收 s1 字符串的所有权，然后计算字符串�
 
 ## 1.6 指针类型
 
-Rust 有多种表示内存地址的类型，接下来将讨论 3 种指针类型：引用、Box 和不安全指针
+Rust 有多种表示内存地址的类型，接下来将讨论 3 种指针类型：引用、Box 和不安全指针。
 
 ### 1.6.1引用
 
 最简单的方式是将引用视为 Rust 中的基本指针类型.
-
-对 i32 的引 用是一个保存着 i32 地址的机器字，这个地址可能位于栈或堆中。表达式 &x 会生成 一个对 x 的引用，在 Rust 术语中，我们会说它借用了对 x 的引用。给定一个引用 r，表达式 *r 会引用 r 指向的值。
+<span style="color:red">（此处简单介绍  需要补充后续详细章节链接）</span>
+对 i32 的引用是一个保存着 i32 地址的机器字，这个地址可能位于栈或堆中。表达式 &x 会生成 一个对 x 的引用，在 Rust 术语中，我们会说它借用了对 x 的引用。给定一个引用 r，表达式 *r 会引用 r 指向的值。
 
 Rust 引用有两种形式：
 + &T	
@@ -495,12 +495,9 @@ Rust 引用有两种形式：
 fn main() {
 //用 s1 的引用作为参数传递给 calculate_length 函数，而不是把 s1 的所有权转移给该函数
     let s1 = String::from("hello");
-
     let len = calculate_length(&s1);      
-
     println!("The length of '{}' is {}.", s1, len);
 }
-
 fn calculate_length(s: &String) -> usize {
     s.len()
 }
@@ -518,12 +515,9 @@ Rust 利用共享引用和可变引用之间的“二选一”机制（只有一
 fn main() {
 //用 s1 的引用作为参数传递给 calculate_length 函数，而不是把 s1 的所有权转移给该函数
     let s1 = String::from("hello");
-
     let len = calculate_length(&s1);      
-
     println!("The length of '{}' is {}.", s1, len);
 }
-
 fn calculate_length(s: &String) -> usize {
     s.len()
 }
