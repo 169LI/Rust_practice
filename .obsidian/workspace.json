@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 546.5,
-    "collapsed": true
+    "width": 546.5
   },
   "right": {
     "id": "c82880c077da5b93",
@@ -175,10 +174,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "80bb43e1abb39a0f",
+  "active": "d31d8b3a9c10c812",
   "lastOpenFiles": [
-    "Rust学习笔记/image/Pasted image 20241106164418.png",
+    "未命名.md",
     "Rust学习笔记/Rust学习笔记.md",
+    "Rust学习笔记/image/Pasted image 20241106164418.png",
     "Rust学习笔记/image/Pasted image 20241105203927.png",
     "Rust学习笔记/image/Pasted image 20241105203854.png",
     "Rust学习笔记/image/Pasted image 20241105203720.png",
@@ -187,7 +187,6 @@
     "Rust学习笔记/image/Pasted image 20241105203418.png",
     "Rust学习笔记/image/Pasted image 20241105203442.png",
     "Rust习题/第三章习题.md",
-    "未命名.md",
     "2024-11-06.md",
     "Rust学习笔记/image/Pasted image 20241105203605.png",
     "Rust学习笔记/image/Pasted image 20241105203553.png",
