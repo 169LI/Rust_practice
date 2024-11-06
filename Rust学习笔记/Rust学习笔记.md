@@ -788,11 +788,10 @@ fn main(){
 
 ```
 fn main(){
-
-
-
+	let mut v = vec![10, 20, 30, 40, 50];
+	v.insert(3, 35);  // 在索引为 3 的位置插入 35
+	assert_eq!(v, [10, 20, 30, 35, 40, 50]);
 }
-
 ```
 
 +  删除元素
@@ -800,8 +799,10 @@ fn main(){
 可以通过索引删除元素：
 
 ```
-v.remove(1);  // 移除索引为 1 的元素
-assert_eq!(v, [10, 30, 35, 40, 50]);
+fn main(){
+	v.remove(1);  // 移除索引为 1 的元素
+	assert_eq!(v, [10, 30, 35, 40, 50]);
+}
 ```
 
 + 弹出元素
@@ -809,24 +810,28 @@ assert_eq!(v, [10, 30, 35, 40, 50]);
 可以使用 pop 方法从向量中移除最后一个元素，并返回一个 Option：
 
 ```
-let mut v = vec!["Snow Puff", "Glass Gem"];
-assert_eq!(v.pop(), Some("Glass Gem"));  // 弹出 "Glass Gem"
-assert_eq!(v.pop(), Some("Snow Puff"));  // 弹出 "Snow Puff"
-assert_eq!(v.pop(), None);  // 向量为空，返回 None
+fn main(){
+	let mut v = vec!["Snow Puff", "Glass Gem"];
+	assert_eq!(v.pop(), Some("Glass Gem"));  // 弹出 "Glass Gem"
+	assert_eq!(v.pop(), Some("Snow Puff"));  // 弹出 "Snow Puff"
+	assert_eq!(v.pop(), None);  // 向量为空，返回 None
+}
 ```
 
 ### 1.8.5 遍历向量
 
 可以使用 for 循环遍历向量：
 ```
-let languages: Vec<String> = std::env::args().skip(1).collect();
-for l in languages {
-    println!("{}: {}", l,
-             if l.len() % 2 == 0 {
-                 "functional"
-             } else {
-                 "imperative"
-             });
+fn main(){
+	let languages: Vec<String> = std::env::args().skip(1).collect();
+	for l in languages {
+	    println!("{}: {}", l,
+	             if l.len() % 2 == 0 {
+	                 "functional"
+	             } else {
+	                 "imperative"
+	             });
+	}
 }
 ```
 
@@ -844,7 +849,7 @@ Rust 中的 Vec 类型非常灵活，适合用于处理需要动态增长的列�
 
 ## 1.9字符串类型
 
-在 Rust 中，字符串的处理方式与 C++ 和其他编程语言有一些相似之处，但也有独特的设计。Rust 提供了多种方式来处理字符串，包括字符串字面量、字节串和动态字符串类型（String）。Rust 中的字符是 Unicode 类型，因此每个字符占据 4 个字节内存空间，但是在字符串中不一样，字符串是 UTF-8 编码，也就是字符串中的字符所占的字节数是变化的(1 - 4)，这样有助于大幅降低字符串所占用的内存空间。
+在 Rust 中，字符串的处理方式与 C++ 和其他编程语言有一些相似之处，但也有独特的设计。Rust 提供了多种方式来处理字符串，包括字符串字面量、字节串和动态字符串类型（String）。Rust 中的字符是 Unicode 类型，因此每个字符占据 4 个字节内存空间，但是在字符串中不一样，**字符串是 UTF-8 编码**，也就是字符串中的字符所占的字节数是变化的(1 - 4)，这样有助于大幅降低字符串所占用的内存空间。
 
 Rust 在语言级别，只有一种字符串类型： str，它通常是以引用类型出现 &str，也就是上文提到的字符串切片。虽然语言级别只有上述的 str 类型，但是在标准库里，还有多种不同用途的字符串类型，其中使用最广的即是 String 类型。
 
@@ -854,7 +859,7 @@ str 类型是硬编码进可执行文件，也无法被修改，但是 String �
 
 ### 1.9.1 字符串字面量
 
-字符串字面量是在代码中直接书写的字符串，它们以双引号包围。可以使用转义序列来处理特殊字符，如换行符、双引号等。
+字符串字面量是在代码中直接书写的字符串，它们以双引号包围。可以使用**转义序列来处理特殊字符，如换行符、双引号**等。
 
 - 基本的字符串字面量
 
@@ -866,15 +871,20 @@ let speech = "\"Ouch!\" said the well.\n";
 
 - 多行字符串 Rust 支持跨多行的字符串字面量，自动包含换行符和空格：
 
+```
+fn main(){
 println!("In the room the women come and go, Singing of Mount Abora");
-
+}
+```
 这里字符串包含换行符，甚至在第二行的开头有空格。
 
 - 行连接 可以用反斜杠 \ 来连接多行字符串，连接时会丢弃换行符和多余的空格：
 
 ```
-println!("In the room the women come and go,
-Singing of Mount Abora");
+fn main(){
+	println!("In the room the women come and go,
+	Singing of Mount Abora");
+}
 ```
 
 输出会是单行文本，注意反斜杠前的空格仍然会保留。
@@ -882,16 +892,20 @@ Singing of Mount Abora");
 - 原始字符串 原始字符串用 r 前缀标记，允许字符串直接包含反斜杠而不进行转义，非常适合处理文件路径或正则表达式。
 
 ```
-let default_win_install_path = r"C:\Program Files\Gorillas";
-let pattern = Regex::new(r"\d+(\.\d+)*");
+fn main(){
+	let default_win_install_path = r"C:\Program Files\Gorillas";
+	let pattern = Regex::new(r"\d+(\.\d+)*");
+}
 ```
 为了处理包含双引号的字符串，可以使用 r###"..."### 语法：
 ```
+fn main(){
 println!(r###"
 This raw string started with 'r###"'.
 Therefore it does not end until we reach a quote mark ('"')
 followed immediately by three pound signs ('###'):
 "###);
+}
 ```
 ### 1.9.2 字节串（Byte String）
 
@@ -900,8 +914,10 @@ followed immediately by three pound signs ('###'):
 - 字节串的定义
 
 ```
-let method = b"GET";
-assert_eq!(method, &[b'G', b'E', b'T']);
+fn main(){
+	let method = b"GET";
+	assert_eq!(method, &[b'G', b'E', b'T']);
+}
 ```
 
 - 字节串的多行表示
@@ -942,7 +958,7 @@ let poodles = "ಠ_ಠ";                 // 字符串字面量
 let hello = String::from("中国人");
 ```
 
-如果问你该字符串多长，你可能会说 3，但是实际上是 9 个字节的长度，因为大部分常用汉字在 UTF-8 中的长度是 3 个字节，因此这种情况下对 hello 进行索引，访问 &hello[0] 没有任何意义，因为你取不到 中 这个字符，而是取到了这个字符三个字节中的第一个字节.(补充代码)
+如果问你该字符串多长，你可能会说 3，但是实际上是 9 个字节的长度，因为大部分常用汉字在 UTF-8 中的长度是 3 个字节，因此这种情况下对 hello 进行索引，访问 &hello\[0] 没有任何意义，因为你取不到 中 这个字符，而是取到了这个字符三个字节中的第一个字节.<span style="color:red">（需要补充代码）</span>
 
 ### 1.9.4 String 类型
 
