@@ -1,8 +1,11 @@
 {
   "theme": "obsidian",
   "cssTheme": "Minimal",
-  "baseFontSize": 12,
+  "baseFontSize": 15,
   "monospaceFontFamily": "Palatino",
   "baseFontSizeAction": true,
-  "accentColor": ""
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "图片居中"
+  ]
 }

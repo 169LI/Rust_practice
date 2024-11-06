@@ -10,24 +10,23 @@ Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https:/
 + 如果你是用的是 Windows 操作系统，你需要安装 Visual Studio 2013 或以上的环境（需要 C/C++ 支持）以使用 MSVC 或安装 MinGW + GCC 编译环境 
 ## 1 之前下载过vs2022 
 （没下过也不建议你下了     还不如开虚拟机用linux系统    或者用MinGW   vs2022有点大）
-![|325](image/Pasted_image_20241105202526.png)
+![|450](image/Pasted_image_20241105202526.png)
 ## 2 rust 编译工具
 官方下载地址: [rust](https://www.rust-lang.org/learn/get-started)  选择64bit，下载后的文件名为rustup-init.exe
-![|350](image/Pasted_image_20241105202801.png)
+![|475](image/Pasted_image_20241105202801.png)
 ## 3 运行rustup-init.exe
-![|300](image/Pasted_image_20241105203307.png)
+![|450](image/Pasted_image_20241105203307.png)
 上图显示的是一个命令行安装向导。
 如果你已经安装 MSVC （推荐），那么安装过程会非常的简单，输入 1 并回车，直接进入第二步。
-![|375](image/Pasted_image_20241105203332.png)
+![|475](image/Pasted_image_20241105203332.png)
  后面可能会使用GNU（没有安装MSVC或者后续准备使用GNU）
 如果你安装的是 MinGW，那么你需要输入 2 （自定义安装），然后系统会询问你 Default host triple? ，请将上图中 default host triple 的 "msvc" 改为 "gnu" 再输入安装程序
-![|350](image/Pasted_image_20241105203348.png)
+![|450](image/Pasted_image_20241105203348.png)
 设置完所有选项，会回到安装向导界面（第一张图），这是我们输入 1 并回车即可
 ## 4 测试
-
 `rustc -V        # 注意的大写的 V`
 
-![|375](image/Pasted_image_20241105203418.png)
+![|475](image/Pasted_image_20241105203418.png)
 ## 5 Visual Studio Code 开发环境
 analyzer 和 Native Debug 两个扩展   之后重启  选择一个新的文件夹
 
