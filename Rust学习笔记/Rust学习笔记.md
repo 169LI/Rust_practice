@@ -1,6 +1,6 @@
 # 搭建开发环境
 首先，需要安装最新版的 Rust 编译工具和 Visual Studio Code
-![[image/Pasted image 20241106180246.png]]
+
 Rust 编译工具：[安装 Rust - Rust 程序设计语言](https://www.rust-lang.org/zh-CN/tools/install)
 
 Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download)
