@@ -6,7 +6,7 @@
       {
         "id": "2b1b700c2f02235f",
         "type": "tabs",
-        "dimension": 45.3551912568306,
+        "dimension": 39.92161254199328,
         "children": [
           {
             "id": "048a1eefdc312215",
@@ -15,7 +15,7 @@
               "type": "markdown",
               "state": {
                 "file": "Rust学习笔记/Rust学习笔记.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -27,7 +27,7 @@
       {
         "id": "d97817c360c3071e",
         "type": "tabs",
-        "dimension": 54.644808743169406,
+        "dimension": 60.07838745800672,
         "children": [
           {
             "id": "5d44bbc2c0238c93",
@@ -37,7 +37,7 @@
               "state": {
                 "file": "Rust学习笔记/Rust学习笔记.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Rust学习笔记"
@@ -95,11 +95,13 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 363.51190185546875
+    "width": 363.51190185546875,
+    "collapsed": true
   },
   "right": {
     "id": "c82880c077da5b93",
@@ -196,11 +198,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5d44bbc2c0238c93",
+  "active": "048a1eefdc312215",
   "lastOpenFiles": [
     "Rust学习笔记/image/Rust学习笔记-020241106-1.png",
-    "Rust学习笔记/image/Rust学习笔记-020241106.png",
     "Rust学习笔记/Rust学习笔记.md",
+    "Rust学习笔记/image/Rust学习笔记-020241106.png",
     "Rust学习笔记/image/Rust学习笔记-1.png",
     "Rust学习笔记/image/Rust学习笔记.png",
     "Rust学习笔记/image/Pasted_image_20241106164418.png",
@@ -211,7 +213,6 @@
     "Rust学习笔记/image/Pasted_image_20241105203927.png",
     "Rust学习笔记/image/Pasted_image_20241105203854.png",
     "Rust学习笔记/image/Pasted_image_20241105203729.png",
-    "Rust学习笔记/image/Pasted_image_20241105203720.png",
     "Rust学习笔记/image",
     "Rust学习笔记/ｉｍａｇｅ",
     "Rust学习笔记/新建文件夹",

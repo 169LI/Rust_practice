@@ -1,5 +1,5 @@
 {
-  "imageNamePattern": "{{fileName}}-{{DATE:YYYYYMMDD}}",
+  "imageNamePattern": "{{所有权与移动}}-{{DATE:YYYYMMDD}}",
   "dupNumberAtStart": false,
   "dupNumberDelimiter": "-",
   "dupNumberAlways": false,
