@@ -1,4 +1,4 @@
-vscode+Rsut+\<Rust语言圣经>+\<Rust程序设计第二版>+obsidian(笔记)+github(代码仓库)
+vscode+Rsut+\<[Rust语言圣经](https://course.rs/about-book.html))>+\<[Rust程序设计第二版](https://github.com/169LI/Rust_study/blob/main/%E3%80%8ARust%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89%E3%80%8B%E5%90%89%E5%A7%86%E2%80%A2%E5%B8%83%E5%85%B0%E8%BF%AA%E3%80%90%E6%96%87%E5%AD%97%E7%89%88_PDF%E7%94%B5%E5%AD%90%E4%B9%A6_%E9%9B%85%E4%B9%A6%E3%80%91.pdf)>+obsidian(笔记软件)+github(代码仓库)
 # obsidian+github
 # 搭建开发环境
 首先，需要安装最新版的 Rust 编译工具和 Visual Studio Code
@@ -34,7 +34,7 @@ Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https:/
 成功配置
 
 ## 5 Visual Studio Code 开发环境
-analyzer 和 Native Debug 两个扩展   之后重启  选择一个新的文件夹
+  analyzer 和 Native Debug 两个扩展   之后重启  选择一个新的文件夹
 
 ![|332](image/Pasted_image_20241105203442.png)
 
@@ -118,13 +118,15 @@ target
 本章从简单的数值类型（如整数和浮点值）开始，后面转而介绍包含更多数据的类型：Box、元组（tuple）、数组和字符串。
 
  >**固定数值类型（整型+浮点型）**
- >Rust 中数值类型的名称都遵循着一种统一的模式，类型定义的形式统一为：有无符号 + 类型大小(位数)。
+ Rust 中数值类型的名称都遵循着一种统一的模式，类型定义的形式统一为：有无符号 + 类型大小(位数)。
 ![](image/Pasted_image_20241105203720.png)
-机器字是一个值，其大小等于运行此代码的机器上“地址”的大小，可能是 32 位，也可能是 64 位。
+ 机器字是一个值，其大小等于运行此代码的机器上“地址”的大小，可能是 32 位，也可能是 64 位。
 默认情况下，12.0 将表示 64 位浮点数 12表示有符号32位整数。
 `let x = -10.abs(); // 错误`
-
 方法调用的优先级高于前缀运算符，因此在对负值进行方法调用时，请务必正确地加上圆括号。
+
+<font color="#2DC26B">进入正题：</font>
+
 ## 1.1 整型（Integer）
 整数型简称整型，按照比特位长度和有无符号分为以下种类
 ![](image/Pasted_image_20241105203729.png)
