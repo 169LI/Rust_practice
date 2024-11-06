@@ -6,7 +6,7 @@
       {
         "id": "83d1ee3f70373a48",
         "type": "tabs",
-        "dimension": 42.62922782386726,
+        "dimension": 48.081264108352144,
         "children": [
           {
             "id": "048a1eefdc312215",
@@ -25,19 +25,19 @@
         ]
       },
       {
-        "id": "725887064fb6b122",
+        "id": "e888ed4e59792680",
         "type": "tabs",
-        "dimension": 57.37077217613273,
+        "dimension": 51.91873589164786,
         "children": [
           {
-            "id": "5d44bbc2c0238c93",
+            "id": "a22738a50b6b59dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Rust学习笔记/Rust学习笔记.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "Rust学习笔记"
@@ -100,7 +100,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c82880c077da5b93",
@@ -197,7 +198,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "048a1eefdc312215",
+  "active": "a22738a50b6b59dc",
   "lastOpenFiles": [
     "Rust学习笔记/image/Rust学习笔记-020241106-1.png",
     "Rust学习笔记/Rust学习笔记.md",

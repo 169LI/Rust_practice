@@ -1,7 +1,7 @@
 vscode+Rsut+\<[Rust语言圣经](https://course.rs/about-book.html))>+\<[Rust程序设计第二版](https://github.com/169LI/Rust_study/blob/main/%E3%80%8ARust%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89%E3%80%8B%E5%90%89%E5%A7%86%E2%80%A2%E5%B8%83%E5%85%B0%E8%BF%AA%E3%80%90%E6%96%87%E5%AD%97%E7%89%88_PDF%E7%94%B5%E5%AD%90%E4%B9%A6_%E9%9B%85%E4%B9%A6%E3%80%91.pdf)>+obsidian(笔记软件)+github(代码仓库)
 # obsidian+github
 # 搭建开发环境
-首先，需要安装最新版的 Rust 编译工具和 Visual Studio Code
+&ensp;&ensp; &ensp;首先，需要安装最新版的 Rust 编译工具和 Visual Studio Code
 Rust 编译工具：[安装 Rust ](https://www.rust-lang.org/zh-CN/tools/install)
 Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https://code.visualstudio.com/Download)
 
@@ -10,31 +10,40 @@ Visual Studio Code：[Download Visual Studio Code - Mac, Linux, Windows](https:/
 + 如果你是用的是 Windows 操作系统，你需要安装 Visual Studio 2013 或以上的环境（需要 C/C++ 支持）以使用 MSVC 或安装 MinGW + GCC 编译环境 
 
 ## 1 之前下载过vs2022 
-（没下过也不建议你下了     还不如开虚拟机用linux系统    或者用MinGW   vs2022有点大）
+&ensp;&ensp; &ensp;（没下过也不建议你下了     还不如开虚拟机用linux系统    或者用MinGW   vs2022有点大）
 ![|450](image/Pasted_image_20241105202526.png)
-## 2 rust 编译工具
-官方下载地址: [rust](https://www.rust-lang.org/learn/get-started)  选择64bit，下载后的文件名为rustup-init.exe
-![|475](image/Pasted_image_20241105202801.png)
-## 3 运行rustup-init.exe
-![|450](image/Pasted_image_20241105203307.png)
-上图显示的是一个命令行安装向导。
 
-如果你已经安装 MSVC （推荐），那么安装过程会非常的简单，输入 1 并回车，直接进入第二步。
+## 2 rust 编译工具
+&ensp;  &ensp;官方下载地址: [rust](https://www.rust-lang.org/learn/get-started)  选择64bit，下载后的文件名为rustup-init.exe
+
+![|475](image/Pasted_image_20241105202801.png)
+
+## 3 运行rustup-init.exe
+
+![|450](image/Pasted_image_20241105203307.png)
+
+&ensp;&ensp; &ensp;上图显示的是一个命令行安装向导。
+
+&ensp;&ensp; &ensp;如果你已经安装 MSVC （推荐），那么安装过程会非常的简单，输入 1 并回车，直接进入第二步。
+
 ![|475](image/Pasted_image_20241105203332.png)
-没有安装MSVC或者后续准备使用GNU得处理方法（ 后面可能会使用GNU,可能还得弄）
- 
-如果你安装的是 MinGW，那么你需要输入 2 （自定义安装），然后系统会询问你 Default host triple? 请将上图中 default host triple 的 "msvc" 改为 "gnu" 再输入安装程序。
+
+&ensp;&ensp; &ensp;没有安装MSVC或者后续准备使用GNU得处理方法（ 后面可能会使用GNU,可能还得弄）
+
+&ensp;&ensp; &ensp;如果你安装的是 MinGW，那么你需要输入 2 （自定义安装），然后系统会询问你 Default host triple? 请将上图中 default host triple 的 "msvc" 改为 "gnu" 再输入安装程序。
+
 ![|450](image/Pasted_image_20241105203348.png)
-设置完所有选项，会回到安装向导界面（第一张图），这是我们输入 1 并回车即可。
+
+&ensp;&ensp; &ensp;设置完所有选项，会回到安装向导界面（第一张图），这是我们输入 1 并回车即可。
 ## 4 测试
 
 `rustc -V        # 注意的大写的 V`
 
 ![|550](image/Pasted_image_20241105203418.png)
-成功配置
+&ensp;&ensp; &ensp;环境成功配置
 
 ## 5 Visual Studio Code 开发环境
-  analyzer 和 Native Debug 两个扩展   之后重启  选择一个新的文件夹
+&ensp; analyzer 和 Native Debug 两个扩展   之后重启  选择一个新的文件夹
 
 ![|332](image/Pasted_image_20241105203442.png)
 
@@ -60,11 +69,11 @@ cargo run
 ![|550](image/Pasted_image_20241105203519.png)
 成功的构建了一个 Rust 命令行程序！
 ## 6 调试（debug）
-自带的那个是真不好用     自己配的这个也没好到哪里！  Rust后面会调试应该可能可以学快点，我也不清楚（学c++不会调试直接凉一半）
+&ensp;&ensp; &ensp;自带的那个是真不好用     自己配的这个也没好到哪里！  Rust后面会调试应该可能可以学快点，我也不清楚（学c++不会调试直接凉一半）
 
-![](image/Pasted_image_20241105203553.png)
+![|575](image/Pasted_image_20241105203553.png)
 
-![](image/Pasted_image_20241105203605.png)
+![|575](image/Pasted_image_20241105203605.png)
 
 直接粘贴下面的内容就ok了
 

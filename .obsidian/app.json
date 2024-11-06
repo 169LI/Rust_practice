@@ -1,5 +1,5 @@
 {
-  "strictLineBreaks": false,
+  "strictLineBreaks": true,
   "showLineNumber": true,
   "vimMode": false,
   "pdfExportSettings": {
@@ -14,5 +14,6 @@
   "newLinkFormat": "relative",
   "showUnsupportedFiles": true,
   "alwaysUpdateLinks": true,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "useTab": false
 }
