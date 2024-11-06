@@ -7,14 +7,6 @@
       "key": "H"
     }
   ],
-  "editor:toggle-source": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "Z"
-    }
-  ],
   "file-explorer:new-file": [],
   "workspace:new-tab": [],
   "editor:open-search-replace": [

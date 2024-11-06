@@ -404,33 +404,26 @@ fn main() {
 		println!("Tuple values: {:?}", tuple);
 	}
 	```
-
-
 + 和数组[ ]做一个简单对比 后面有对数组的详细介绍[[#1.7 数组  |数组]]
     - 类型：
 		* 元组可以包含不同类型的元素； 
 		* 数组只能包含相同类型的元素。
      - 长度：
-	* 元组的长度是固定的，但长度可以是不同的（不同的元组可以有不同数量的* 元素）；
-	的长度在定义时确定，并且所有数组的长度都是相同的。
-
-访问方式：
-
-	元组可以通过位置来访问元素， tuple.0、tuple.1。
-	
-	数组可以通过索引来访问， array[0]。
-
-```
-fn  main(){
-    let text = "I see the eigenvalue in thine eye";
-    let temp = text.split_at(21);
-    let head = temp.0;
-    let tail = temp.1;
-    
-    assert_eq!(head, "I see the eigenvalue ");
-    assert_eq!(tail, "in thine eye");
-}
-```
+	     * 元组的长度是固定的，但长度可以是不同的（不同的元组可以有不同数量的元素）；
+	     * 数组的长度在定义时确定，并且所有数组的长度都是相同的。
++ 访问方式：
+	- 元组可以通过位置来访问元素， tuple.0、tuple.1。
+	- 数组可以通过索引来访问， array[0]。 
+    ```
+	fn  main(){
+	let text = "I see the eigenvalue in thine eye";
+	let temp = text.split_at(21);
+	let head = temp.0;
+	let tail = temp.1;
+	assert_eq!(head, "I see the eigenvalue ");
+	assert_eq!(tail, "in thine eye");
+	}
+	```
 
 还有常用的元组类型是零元组 ()。传统上，这叫作单元类型，因为此类型只有 一个值，写作 ()。当无法携带任何有意义的值但其上下文仍然要求传入某种类型时， Rust 就会使用单元类型。main 函数就返回这个单元类型 ()，你不能说 main 函数无返回值，因为没有返回值的函数在 Rust 中是有单独的定义的：发散函数( diverge function )，顾名思义，无法收敛的函数。
 
