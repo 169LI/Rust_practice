@@ -126,22 +126,83 @@ Rust 会检查整型溢出，若存在这些问题，则使程序在编译时 pa
 - checked_add: 溢出时返回 None。
 - overflowing_add: 返回结果和溢出指示布尔值。
 - saturating_add: 超过最大值时返回最大值。
+
+```
+   fn main() {
+    // 加法 (Addition)
+    println!("加法示例:");
+
+    let wrapping_add_result = u8::MAX.wrapping_add(1);
+    println!("wrapping_add: {}", wrapping_add_result); // 结果是 0
+
+    let checked_add_result = u8::MAX.checked_add(1);
+    println!("checked_add: {:?}", checked_add_result); // 返回 None
+
+    let (overflowing_add_result, overflowing_add_overflowed) = u8::MAX.overflowing_add(1);
+    println!("overflowing_add: result = {}, overflowed = {}", overflowing_add_result, overflowing_add_overflowed); // result = 0, overflowed = true
+
+    let saturating_add_result = u8::MAX.saturating_add(1);
+    println!("saturating_add: {}", saturating_add_result); // 结果是 255
+    }
+```
 2. 减法
 - wrapping_mul: 循环乘法。
 - checked_mul: 如果发生溢出返回 None。
 - overflowing_mul: 返回计算结果和是否溢出的布尔值。
 - saturating_mul: 结果不会超过最大值。
+```
+fn main(){
+ // 减法 (Subtraction)
+    println!("\n减法示例:");
+
+    let wrapping_sub_result = u8::MIN.wrapping_sub(1);
+    println!("wrapping_sub: {}", wrapping_sub_result); // 结果是 255
+
+    let checked_sub_result = u8::MIN.checked_sub(1);
+    println!("checked_sub: {:?}", checked_sub_result); // 返回 None
+
+    let (overflowing_sub_result, overflowing_sub_overflowed) = u8::MIN.overflowing_sub(1);
+    println!("overflowing_sub: result = {}, overflowed = {}", overflowing_sub_result, overflowing_sub_overflowed); // result = 255, overflowed = true
+
+    let saturating_sub_result = u8::MIN.saturating_sub(1);
+    println!("saturating_sub: {}", saturating_sub_result); // 结果是 0
+}
+```
+
 3. 乘法
 - wrapping_mul: 循环乘法。
 - checked_mul: 如果发生溢出返回 None。
 - overflowing_mul: 返回计算结果和是否溢出的布尔值。
 - saturating_mul: 结果不会超过最大值。
+```
+fn main(){
+// 乘法 (Multiplication)
+    println!("\n乘法示例:");
+
+    let wrapping_mul_result = u8::MAX.wrapping_mul(2);
+    println!("wrapping_mul: {}", wrapping_mul_result); // 结果是 254
+
+    let checked_mul_result = u8::MAX.checked_mul(2);
+    println!("checked_mul: {:?}", checked_mul_result); // 返回 None
+
+    let (overflowing_mul_result, overflowing_mul_overflowed) = u8::MAX.overflowing_mul(2);
+    println!("overflowing_mul: result = {}, overflowed = {}", overflowing_mul_result, overflowing_mul_overflowed); // result = 254, overflowed = true
+
+    let saturating_mul_result = u8::MAX.saturating_mul(2);
+    println!("saturating_mul: {}", saturating_mul_result); // 结果是 255
+}
+```
+
 4. 除法
 - wrapping_div: 循环除法（注意除以零会导致 panic）。
 - checked_div: 如果发生除以零返回 None。
 - overflowing_div: 返回计算结果和是否发生溢出的布尔值（通常不使用）
 - saturating_div: 结果不会低于最小值（通常不使用）。
-5. 取模
+```
+
+```
+
+1. 取模
 - wrapping_rem: 循环取模（注意除以零会导致 panic）。
 - checked_rem: 如果发生除以零返回 None。
 - overflowing_rem: 返回计算结果和是否发生溢出的布尔值（通常不使用）。
