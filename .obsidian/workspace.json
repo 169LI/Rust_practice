@@ -100,8 +100,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.51190185546875,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c82880c077da5b93",
@@ -198,7 +197,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "048a1eefdc312215",
+  "active": "5d44bbc2c0238c93",
   "lastOpenFiles": [
     "Rust学习笔记/image/Rust学习笔记-020241106-1.png",
     "Rust学习笔记/Rust学习笔记.md",
