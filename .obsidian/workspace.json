@@ -11,10 +11,14 @@
             "id": "1f4e2293bd60d5dd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "日程/2024-11-07.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "2024-11-07"
             }
           }
         ]
@@ -160,9 +164,19 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "b9fb626bef41eb82",
+            "type": "leaf",
+            "state": {
+              "type": "teleprompter",
+              "state": {},
+              "icon": "scroll",
+              "title": "Teleprompter"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -177,16 +191,17 @@
       "canvas:新建白板": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "teleprompter:Teleprompter": false
     }
   },
   "active": "1f4e2293bd60d5dd",
   "lastOpenFiles": [
-    "2024-11-07.md",
+    "Rust学习笔记/Rust学习笔记.md",
+    "日程/2024-11-07.md",
     "日程",
     "新建文件夹",
     "未命名 1.canvas",
-    "Rust学习笔记/Rust学习笔记.md",
     "未命名.canvas",
     "Rust学习笔记/image/Rust学习笔记-020241106-1.png",
     "Rust学习笔记/image/Rust学习笔记-020241106.png",
