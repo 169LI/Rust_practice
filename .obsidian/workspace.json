@@ -4,43 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "83d1ee3f70373a48",
+        "id": "1c1897e140f82bc2",
         "type": "tabs",
-        "dimension": 44.637883008356546,
         "children": [
           {
-            "id": "048a1eefdc312215",
+            "id": "1f4e2293bd60d5dd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rust学习笔记/Rust学习笔记.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Rust学习笔记"
-            }
-          }
-        ]
-      },
-      {
-        "id": "e888ed4e59792680",
-        "type": "tabs",
-        "dimension": 55.362116991643454,
-        "children": [
-          {
-            "id": "a22738a50b6b59dc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rust学习笔记/Rust学习笔记.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Rust学习笔记"
+              "title": "新标签页"
             }
           }
         ]
@@ -74,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:Rust习题 path:Rust学习笔记 tag:",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,8 +69,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -198,19 +171,24 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "daily-notes:打开/创建今天的日记": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a22738a50b6b59dc",
+  "active": "1f4e2293bd60d5dd",
   "lastOpenFiles": [
-    "Rust学习笔记/image/Rust学习笔记-020241106-1.png",
+    "2024-11-07.md",
+    "日程",
+    "新建文件夹",
+    "未命名 1.canvas",
     "Rust学习笔记/Rust学习笔记.md",
+    "未命名.canvas",
+    "Rust学习笔记/image/Rust学习笔记-020241106-1.png",
     "Rust学习笔记/image/Rust学习笔记-020241106.png",
     "Rust学习笔记/image/Rust学习笔记-1.png",
     "Rust学习笔记/image/Rust学习笔记.png",
@@ -236,8 +214,6 @@
     "Rust学习笔记/image",
     "Rust学习笔记",
     "Rust习题",
-    "未命名.canvas",
-    "未命名 1.canvas",
     "Obsidian Git 插件.md",
     "创建链接.md"
   ]
