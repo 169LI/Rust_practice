@@ -1,11 +1,11 @@
 {
-  "theme": "obsidian",
-  "cssTheme": "Minimal",
+  "theme": "moonstone",
+  "cssTheme": "Sanctum",
   "baseFontSize": 16,
   "monospaceFontFamily": "Palatino",
   "baseFontSizeAction": true,
   "accentColor": "",
   "enabledCssSnippets": [
-    "段落"
+    "图片居中"
   ]
 }
