@@ -1064,13 +1064,15 @@ fn say_hello(s: &str) {
 ### 1.9.5 使用字符串
 
 &ensp; &ensp; &ensp;Rust 字符串类型支持许多操作，包括**比较、查找、替换和拆分 追加、插入、替换、删除、连接**等。
++ 字符串比较
 
->字符串比较
-    使用 == 和 != 进行字符串的比较：
+&ensp; &ensp; &ensp;使用 == 和 != 进行字符串的比较：
+
 ```
 assert!("ONE".to_lowercase() == "one");
 ```
-字符串查找和替换
+
++ 字符串查找和替换
 
 ```
 assert!("peanut".contains("nut")); assert_eq!("ಠ_ಠ".replace("ಠ", "■"), "■_■");
