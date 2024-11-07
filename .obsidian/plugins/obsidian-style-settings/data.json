@@ -1,3 +1,9 @@
 {
-  "minimal-advanced@@hide-markdown": false
+  "minimal-advanced@@hide-markdown": false,
+  "sanctum@@light-mode-contrast-mode": "sanctum-contrast-light",
+  "sanctum@@no-sanctum-icons": true,
+  "sanctum@@active-line-accent": "rgba(var(--color-accent-rgb), .3)",
+  "sanctum@@color-accent-rgb-l": "246, 141, 69",
+  "sanctum@@color-accent-rgb-d": "99, 149, 156",
+  "sanctum@@dark-mode-contrast-mode": "sanctum-contrast-dark"
 }
