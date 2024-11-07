@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Rust学习笔记/Rust学习笔记.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -188,6 +188,7 @@
   },
   "active": "8b483af3d34de302",
   "lastOpenFiles": [
+    "Rust学习笔记/image/{{数据类型}}-20241107-2.png",
     "Rust学习笔记/image/{{数据类型}}-20241107-1.png",
     "Rust学习笔记/image/{{数据类型}}-20241107.png",
     "Rust学习笔记/image/{{所有权与移动}}-20241107.png",
@@ -209,7 +210,6 @@
     "Rust学习笔记/image/Pasted image 20241106180246.png",
     "Rust学习笔记/image/Pasted_image_20241105202526.png",
     "Pasted_image_20241105202801.md",
-    "Rust学习笔记/image/Pasted_image_20241105203927.png",
     "Rust学习笔记/image",
     "Rust学习笔记/ｉｍａｇｅ",
     "Rust学习笔记/新建文件夹",
