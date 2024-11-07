@@ -1,7 +1,7 @@
 {
   "theme": "moonstone",
   "cssTheme": "Minimal",
-  "baseFontSize": 17,
+  "baseFontSize": 21,
   "monospaceFontFamily": "Palatino",
   "baseFontSizeAction": true,
   "accentColor": "",
