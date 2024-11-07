@@ -1,7 +1,7 @@
 {
   "theme": "moonstone",
   "cssTheme": "Sanctum",
-  "baseFontSize": 16,
+  "baseFontSize": 19,
   "monospaceFontFamily": "Palatino",
   "baseFontSizeAction": true,
   "accentColor": "",

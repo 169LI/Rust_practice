@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1c1897e140f82bc2",
+        "id": "070555a3a5bf14e6",
         "type": "tabs",
         "children": [
           {
-            "id": "1f4e2293bd60d5dd",
+            "id": "2bfa8981723857b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -170,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 550.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,15 +182,16 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "obsidian-git:Open Git source control": false,
-      "teleprompter:Teleprompter": false,
       "obsidian-day-planner:Open Timeline": false,
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "1f4e2293bd60d5dd",
+  "active": "2bfa8981723857b0",
   "lastOpenFiles": [
-    "日程/2024-11-07.md",
+    "日程/24-11/2024-11-07.md",
     "Rust学习笔记/Rust学习笔记.md",
+    "日程/24-11/2024-11-08.md",
+    "日程/24-11",
     "日程",
     "新建文件夹",
     "未命名 1.canvas",
