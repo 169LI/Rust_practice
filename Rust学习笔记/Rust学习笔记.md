@@ -1629,12 +1629,12 @@ struct Label { number: u32 }
 ### 2.3.2 Clone
 &ensp; &ensp; &ensp;说到Copy，那就不得提一提他的好兄弟Clone，这里做一简单介绍：
 
-&ensp; &ensp; &ensp;与 `Copy` 不同，`Clone` 允许你**显式**地复制类型的值。当一个类型实现了 `Clone` trait 时，你可以调用它的 `clone` 方法来创建一个新的副本。
+&ensp; &ensp; &ensp;与 `Copy` 不同， `Clone` 是一个普通的 trait，它包含一个方法：`clone`。允许你**显式**地复制类型的值。当一个类型实现了 `Clone` trait 时，你可以调用它的 `clone` 方法来创建一个新的副本。这对于那些不能按位复制的类型非常有用，例如包含指针或引用的类型。`Clone` trait 还允许你自定义复制行为。你可以在 `clone` 方法中添加任何逻辑，以便在复制时执行特定的操作。
 
 &ensp; &ensp; &ensp;要实现 `Clone` trait，你需要在类型定义上添加 `#[derive(Clone)]` 属性或手动实现 `clone` 方法。
 
 ```
-#[derive(Clone)]
+#[derive(Copy,Clone)]
 struct Point {
     x: i32,
     y: i32,
@@ -1646,6 +1646,13 @@ impl Clone for Point {
         Self { x: self.x, y: self.y }
     }
 }
+fn main() {
+    let p1 = Point { x: 1, y: 2 };
+    let p2 = p1; // 自动复制
+    let p3 = p1.clone(); // 显式复制
+}
 ```
 
+&ensp; &ensp; &ensp;没错，只要你能够定义如何创建一个新的副本，你就可以实现 `Clone` trait。
 
+&ensp; &ensp; &ensp;此外，所有实现了 `Copy` 的类型都必须实现 `Clone`。当你显式地调用 `clone` 方法时，Rust 会假定你知道自己在做什么，并且希望按位复制该值。
