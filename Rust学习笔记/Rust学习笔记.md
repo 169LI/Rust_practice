@@ -1753,6 +1753,7 @@ let u: Rc<String> = s.clone();
 
 ![|475](image/{{所有权2.1}}-20241108-9.png)
 
-&ensp; &ensp; &ensp;这 3 个 Rc<String> 指针指向了同一个内存块，其中包含引用计数和 String
-本身的空间。通常的所有权规则适用于 Rc 指针本身，当丢弃最后一个现有 Rc 时，
-Rust 也会丢弃 String
+&ensp; &ensp; &ensp;这 3 个 Rc\<String> 指针指向了同一个内存块，其中包含引用计数和 String本身的空间。通常的所有权规则适用于 Rc 指针本身，当丢弃最后一个现有 Rc 时，
+Rust 也会丢弃 String。
+
+可以直接在 Rc\<String> 上使用 String 的任何常用方法：
