@@ -559,7 +559,7 @@ fn calculate_length(s: String) -> (String, usize) {
 
 ### 1.6.1 引用
 
-&ensp;&ensp; &ensp;最简单的方式是将引用视为 Rust 中的基本指针类型.<span style="color:red">（此处简单介绍  需要补充后续详细章节链接）</span>
+&ensp;&ensp; &ensp;最简单的方式是将引用视为 Rust 中的基本指针类型.  [<font color="#ff0000">点击跳转</font>](#三.引用)
 
 &ensp;&ensp; &ensp;对 i32 的引用是一个保存着 i32 地址的机器字，这个地址可能位于栈或堆中。表达式 &x 会生成 一个对 x 的引用，在 Rust 术语中，我们会说它借用了对 x 的引用。给定一个引用 r，表达式 *r 会引用 r 指向的值。
 
@@ -1764,6 +1764,9 @@ Rust 也会丢弃 String。
 
 # 三.引用
 
+&ensp; &ensp; &ensp;迄今为止，我们看到的所有指针类型（无论是简单的 Box\<T> 堆指针，还是String 值和 Vec 值内部的指针）都是拥有型指针，这意味着当拥有者被丢弃时，它
+的引用目标也会随之消失。Rust 还有一种名为引用（reference）的非拥有型指针，这
+种指针对引用目标的生命周期毫无影响。
 
 
 
