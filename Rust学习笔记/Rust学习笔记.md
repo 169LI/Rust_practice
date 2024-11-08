@@ -619,7 +619,6 @@ fn main() {
 ### 1.6.2 Box
 
 &ensp;&ensp; &ensp;在堆中分配值的最简单方式是使用 Box::new。（这里**需要对内存的栈和堆有一个认识**，后面学习依旧要用到，这里不在做笔记）Box 是一个智能指针，它在堆上分配内存并提供对该内存的安全访问。使用 Box 可以在运行时动态分配内存，并且可以存储大小在编译时未知的类型。
-<span style="color:red">（在所有权和移动时再详细深入介绍Box 等待补充链接）</span>
 
 ```
 fn main() {
@@ -631,8 +630,22 @@ fn main() {
     let value = *boxed_value;
     println!("The unboxed value is: {}", value);
 }
-
 ```
+
+&ensp; &ensp; &ensp;Box\<T> 是指向存储在堆上的 T 类型值的指针。可以调用 Box::new(v) 分配一些堆空间，将值 v 移入其中，并返回一个指向该堆空间的 Box。因为 Box 拥有它所指向的空间，所以当丢弃 Box 时，也会释放此空间。
+```
+fn main(){
+    let point = Box::new((0.625, 0.5));  // 在此分配了point
+    let label = format!("{:?}", point);  // 在此分配了label
+    assert_eq!(label, "(0.625, 0.5)");
+}
+```
+![|675](image/{{所有权2.1}}-20241108-1.png)
+
+&ensp; &ensp; &ensp;栈帧本身包含变量 point 和 label，其中每个变量都指向其拥有的堆中内存。label在栈帧中存储的是什莫
+&ensp; &ensp; &ensp;当丢弃它们时，它们拥有的堆中内存也会一起被释放。
+
+
 ### 1.6.3 不安全指针(裸指针)
 
 &ensp;&ensp; &ensp;Rust 也有裸指针类型 *mut T 和 *const T。裸指针实际上和 C++ 中的指针很像。使用裸指针是不安全的，因为Rust 不会跟踪它指向的内容。例如，裸指针可能为空，或者它们可能指向已释放的内存或现在包含不同类型的值。C++ 的所有经典指针错误都可能“借尸还魂”。
@@ -1339,6 +1352,7 @@ fn decode(data: &Bytes) {
 &ensp; &ensp; &ensp;因为堆上的数据缺乏组织，因此跟踪这些数据何时分配和释放是非常重要的，否则堆上的数据将产生内存泄漏 —— 这些数据将永远无法被回收。这就是 Rust 所有权系统为我们提供的强大保障。
 
 &ensp; &ensp; &ensp;通过内存上的关系来进一步认识“所有权”：
+
 ![|575](image/{{所有权2.1}}-20241108.png)
 ```
 fn print_padovan() {
@@ -1350,3 +1364,4 @@ fn print_padovan() {
     println!("P(1..10) = {:?}", padovan);
 }                                   // 在此丢弃
 ```
+&ensp; &ensp; &ensp;请注意，保存 padovan 指针、容量和长度的字都直接位于print_padovan 函数的栈帧中，只有向量的缓冲区才分配在堆上。

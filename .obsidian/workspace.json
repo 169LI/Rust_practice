@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c82880c077da5b93",
@@ -86,7 +87,7 @@
       {
         "id": "e86218f372717184",
         "type": "tabs",
-        "dimension": 67.6923076923077,
+        "dimension": 76,
         "children": [
           {
             "id": "415b06ff4cc4251e",
@@ -172,7 +173,7 @@
       {
         "id": "eeb927aa09928d95",
         "type": "tabs",
-        "dimension": 32.30769230769231,
+        "dimension": 24,
         "children": [
           {
             "id": "4b59d87a5177aea4",
@@ -188,7 +189,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333.5
+    "width": 346.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,6 +205,7 @@
   },
   "active": "c2d40a7a240f7bea",
   "lastOpenFiles": [
+    "Rust学习笔记/image/{{所有权2.1}}-20241108-1.png",
     "Rust学习笔记/image/{{所有权2.1}}-20241108.png",
     "Rust习题/第三章习题未修正.md",
     "日程/24-11/2024-11-08.md",
@@ -224,7 +226,6 @@
     "Rust学习笔记/image/Rust学习笔记-1.png",
     "Rust学习笔记/image/Rust学习笔记.png",
     "Rust学习笔记/image/Pasted_image_20241106164418.png",
-    "Rust学习笔记/image/Pasted image 20241106180246.png",
     "Pasted_image_20241105202801.md",
     "Rust学习笔记/image",
     "Rust学习笔记/ｉｍａｇｅ",
