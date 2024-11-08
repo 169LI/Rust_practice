@@ -1609,14 +1609,14 @@ fn main(){
 &ensp; &ensp; &ensp;num1 和 num2 的情况有所不同。i32 只是内存中的几字节，它不拥有任何堆资源，也不会实际依赖除本身的字节之外的任何内存。当我们将它的每一位转移给 num2 时，其实已经为 num1 制作了一个完全独立的副本。
 
 &ensp; &ensp; &ensp;大多数类型会被移动，现在该谈谈例外情况了，即那些被Rust 指定成 **Copy 类型**的类型。对 Copy 类型的值进行赋值会复制这个值，而不会移动它。赋值的源仍会保持已初始化和可用状态，并且具有与之前相同的值。把 Copy类型传给函数和构造器的行为也是如此。
-
+###2.3.1  实现了 Copy 特征的基本类型
 &ensp; &ensp; &ensp;Rust 中的基本类型都实现了 Copy 特征，包括整数、浮点数、布尔值和字符。对于复合类型来说，如果包含的所有字段都是 Copy 的，那么这个元素也是 Copy 的。例如：(i32, i32) 、\[i32,i32]是 Copy 的，但 (i32, String) 、 \[i32, String]则不是。
 
 &ensp; &ensp; &ensp;任何在丢弃值时需要做一些特殊操作的类型都不能是 Copy 类型：Vec 需要释放自身元素、File 需要关闭自身文件句柄、MutexGuard 需要解锁自身互斥锁，等等。
 
 &ensp; &ensp; &ensp;那么自定义类型呢？**默认情况下**，struct 类型和 enum 类型不是 Copy 类型，你如果要用，就会发生**所有权转移**。
 
-&ensp; &ensp; &ensp;但是结构体的所有字段本身都是 Copy 类型，那么也可以通过将属性\#\[derive(Copy,Clone)] 放置在此定义之上来创建 Copy 类型，如下所示：
+&ensp; &ensp; &ensp;但是结构体的所有字段本身都是 Copy 类型，那么也可以通过将属性\#\[derive(Copy,Clone)] 放置在此定义之上来创建 Copy 类型，(一会再说这个Clone)如下所示：
 ```
 #[derive(Copy, Clone)]
 struct Label { number: u32 }
@@ -1626,6 +1626,7 @@ struct Label { number: u32 }
 
 &ensp; &ensp; &ensp;切记不要试图在一个字段不全是Copy 类型的结构体上这样做。
 
+&ensp; &ensp; &ensp;说到Copy，那就不得提一提他的好兄弟Clone，这里做一简单介绍：
 
 
 
