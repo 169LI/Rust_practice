@@ -642,10 +642,8 @@ fn main(){
 ```
 ![|675](image/{{所有权2.1}}-20241108-1.png)
 
-&ensp; &ensp; &ensp;栈帧本身包含变量 point 和 label，其中每个变量都指向其拥有的堆中内存。label在栈帧中存储的是什莫
+&ensp; &ensp; &ensp;栈帧本身包含变量 point 和 label，其中每个变量都指向其拥有的堆中内存。<font color="#ff0000">label在栈帧中存储的是什莫？</font>
 &ensp; &ensp; &ensp;当丢弃它们时，它们拥有的堆中内存也会一起被释放。
-
-
 ### 1.6.3 不安全指针(裸指针)
 
 &ensp;&ensp; &ensp;Rust 也有裸指针类型 *mut T 和 *const T。裸指针实际上和 C++ 中的指针很像。使用裸指针是不安全的，因为Rust 不会跟踪它指向的内容。例如，裸指针可能为空，或者它们可能指向已释放的内存或现在包含不同类型的值。C++ 的所有经典指针错误都可能“借尸还魂”。
@@ -1365,3 +1363,26 @@ fn print_padovan() {
 }                                   // 在此丢弃
 ```
 &ensp; &ensp; &ensp;请注意，保存 padovan 指针、容量和长度的字都直接位于print_padovan 函数的栈帧中，只有向量的缓冲区才分配在堆上。
+
+![|675](image/{{所有权2.1}}-20241108-2.png)
+```
+struct Person { name: String, birth: i32 }
+fn main(){
+    let mut composers = Vec::new();
+    
+    composers.push(Person { name: "Palestrina".to_string(),birth: 1525 });
+    composers.push(Person { name: "Dowland".to_string(), birth: 1563 });
+    composers.push(Person { name: "Lully".to_string(), birth: 1632 });
+    
+    for composer in &composers {
+        println!("{}, born {}", composer.name, composer.birth);
+    }
+}
+```
+&ensp; &ensp; &ensp;composers 拥有一个向量，向量拥有自己的元素，每个元素都是一个 Person 结构体，每个结构体都拥有自己的字段，并且字符串字段拥有自己的文本。当控制流离开声明 composers 的作用域时，程序会丢弃自己的值并将整棵所有权树一起丢弃。
+
+&ensp; &ensp; &ensp;每个值都有一个唯一的拥有者，因此很容易决定何时丢弃它。Rust 的单一拥有者规则将禁止任何可能让它们排列得比树结构更复杂的可能性。Rust 程序中的每一个值都是某棵树的成员，树根是某个变量。
+
+&ensp; &ensp; &ensp;在 Rust 中丢弃一个值的方式就是从所有权树中移除它：或者离开变量的作用域，或者从向量中删除一个元素，或者执行其他类似的操作。
+
+所有权对于
