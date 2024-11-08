@@ -1467,7 +1467,7 @@ fn main(){
 
 &ensp; &ensp; &ensp;整个 Person 结构体（不是指向它的指针）被传给了向量的 push 方法，此方法会将该结构体移动到向量的末尾。向量接管了 Person 的所有权，因此也间接接手了name 这个 String 的所有权。
 
-移动的永远是值本身，而不是这些值拥有的堆存储。对于向量和字符串，值本身就是指单独的“三字标头”。
+&ensp; &ensp; &ensp;移动的永远是值本身，而不是这些值拥有的堆存储。对于向量和字符串，值本身就是指单独的“三字标头”(对内存的地址，容量，当前长度)。
 
 ### 2.2.2 移动与控制流
 
@@ -1560,21 +1560,47 @@ let v = vec!["liberté".to_string(),
 
 &ensp; &ensp; &ensp;当我们将向量直接传给循环（如 for ... in v）时，会将向量从 v 中移动出去，让 v 变成未初始化状态。for 循环的内部机制会获取向量的所有权并将其分解为元素。在每次迭代中，循环都会将另一个元素转移给变量 s。 (for对vec说: 我全部拿走用了，一会全部还给你，但是你不能让别人在用了。）
 
+&ensp; &ensp; &ensp;如果需要从拥有者中移出一个编译器无法跟踪的值，那么可以考虑将拥有者的类型更改为能动态跟踪自己是否有值的类型。
+
+```
+struct Person { name: Option<String>, birth: i32 }
+let mut composers = Vec::new();
+composers.push(Person { name: Some("Palestrina".to_string()),
+                        birth: 1525 });
+```
+
+&ensp; &ensp; &ensp;不能这样做：`let first_name = composers[0].name;`
+
+&ensp; &ensp; &ensp;这只会引发与前面一样的“无法移动到索引结构之外”错误。但是因为已将 name字段的类型从 String 改成了 Option\<String>，所以这意味着 None 也是该字段要保存的合法值。因此，可以replace：
+```
+let first_name = std::mem::replace(&mut composers[0].name, None);
+
+assert_eq!(first_name, Some("Palestrina".to_string()));
+assert_eq!(composers[0].name, None);
+```
+
+&ensp; &ensp; &ensp;replace 调用会移出 composers\[0].name 的值，将 None 留在原处，并将原始值的所有权转移给其调用者。事实上，这种使用 Option 的方式非常普遍，所以该类型专门为此提供了一个 take 方法，以便更清晰地写出上述操作
+
+`let first_name = composers[0].name.take();`
 
 
+## 2.3 Copy 类型
 
+&ensp; &ensp; &ensp;移动能让这些类型的所有权清晰且赋值开销极低。但对于像整
+数或字符这样的简单类型，如此谨小慎微的处理方式have必要?
 
+&ensp; &ensp; &ensp;在Rust中String 进行赋值和用 i32 进行赋值时内存中有什么不同：
+```
+fn main(){
+    let string1 = "somnambulance".to_string();
+    let string2 = string1;
+    
+    let num1: i32 = 36;
+    let num2 = num1;
+}
+```
 
-
-
-
-
-
-
-
-
-
-
+![|650](image/{{所有权2.1}}-20241108-6.png)
 
 
 
