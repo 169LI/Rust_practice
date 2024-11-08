@@ -1453,15 +1453,17 @@ fn main(){
     composers.push(Person { name: "Palestrina".to_string(),birth: 1525 }); 
 }
 ```
+&ensp; &ensp; &ensp;下面的分析基于此段代码。
 
+2. 函数返回值
 
-2.函数返回值
+&ensp; &ensp; &ensp;Vec::new() 构造一个新向量并返回，返回的不是指向此向量的指针，而是向量本身：它的所有权从 Vec::new 转移给了变量 composers。同样，to_string 调用返回的是一个新的 String 实例。
 
+3. 构造出新值
 
+&ensp; &ensp; &ensp;新 Person 结构体的 name 字段是用 to_string 的返回值初始化的。该结构体拥有这个字符串的所有权。
 
-
-
-
+4. 将值传给函数
 
 
 
