@@ -1521,8 +1521,44 @@ let fifth = v[4]; // 这里也一样
 
 &ensp; &ensp; &ensp;编译器会建议使用引用，因为你可能只是想访问该元素而不是移动它，这确实通常确实是你想要做的。但是，如果真想将一个元素移出向量该怎么办呢？
 
+&ensp; &ensp; &ensp;我们可以通过填充来解决：
 
+```
+fn main(){
+    // 构建一个由字符串"101"、"102"……"105"组成的向量
+    let mut v = Vec::new();
+    for i in 101 .. 106 {
+        v.push(i.to_string());
+    }
+    // 方法一：从向量的末尾弹出一个值：
+    let fifth = v.pop().expect("vector empty!");
+    assert_eq!(fifth, "105");
+    
+    // 方法二：将向量中指定索引处的值与最后一个值互换，并把前者移动出来：
+    let second = v.swap_remove(1);
+    assert_eq!(second, "102");
+    
+    // 方法三：把要取出的值和另一个值互换：
+    let third = std::mem::replace(&mut v[2], "substitute".to_string());
+    assert_eq!(third, "103");
+    
+    // 看看向量中还剩下什么
+    assert_eq!(v, vec!["101", "104", "substitute"]);
+}
+```
 
+&ensp; &ensp; &ensp;像 Vec 这样的集合类型通常也会提供在循环中消耗所有元素的方法：
+```
+let v = vec!["liberté".to_string(),
+                 "égalité".to_string(),
+                 "fraternité".to_string()];
+    for mut s in v {
+        s.push('!');
+        println!("{}", s);
+    }
+```
+
+&ensp; &ensp; &ensp;当我们将向量直接传给循环（如 for ... in v）时，会将向量从 v 中移动出去，让 v 变成未初始化状态。for 循环的内部机制会获取向量的所有权并将其分解为元素。在每次迭代中，循环都会将另一个元素转移给变量 s。 (for对vec说: 我全部拿走用了，一会全部还给你，但是你不能让别人在用了。）
 
 
 
