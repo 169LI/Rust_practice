@@ -1615,7 +1615,9 @@ fn main(){
 
 &ensp; &ensp; &ensp;任何在丢弃值时需要做一些特殊操作的类型都不能是 Copy 类型：Vec 需要释放自身元素、File 需要关闭自身文件句柄、MutexGuard 需要解锁自身互斥锁，等等。
 
-&ensp; &ensp; &ensp;那么自定义类型呢？**默认情况下**，struct 类型和 enum 类型不是 Copy 类型，你如果要用，就会发生**所有权转移**，后续在编写代码时该变量不可再用。但是结构体的所有字段本身都是 Copy 类型，那么也可以通过将属性`#[derive(Copy,Clone)]`放置在此定义之上来创建 Copy 类型，(一会再说这个Clone)如下所示：
+&ensp; &ensp; &ensp;对于 `String`、`Vec<T>` 这样的**堆分配类型**（不实现 `Copy`），只能使用 `.clone()` 进行深拷贝。(一会再说这个Clone)
+
+&ensp; &ensp; &ensp;那么自定义类型呢？**默认情况下**，struct 类型和 enum 类型不是 Copy 类型，你如果要用，就会发生**所有权转移**，后续在编写代码时该变量不可再用。但是结构体的所有字段本身都是 Copy 类型，那么也可以通过将属性`#[derive(Copy,Clone)]`放置在此定义之上来创建 Copy 类型，如下所示：
 ```
 #[derive(Copy,Clone)]
 struct Point {
@@ -1647,8 +1649,7 @@ fn main() {
 &ensp; &ensp; &ensp;要实现 `Clone` trait，你需要在类型定义上添加 `#[derive(Clone)]` 属性或手动实现 `clone` 方法。
 
 ```
-#[derive(Copy,Clone)]
-
+#[derive(Clone)]
 struct Person {
     name: String,
     age: u8,
@@ -1664,7 +1665,31 @@ fn main() {
     println!("person1: {}, {}", person1.name, person1.age);
     println!("person2: {}, {}", person2.name, person2.age);
 }
+
 ```
+
+```
+struct Point {
+    x: i32,
+    y: String,
+}
+
+impl Clone for Point {
+    fn clone(&self) -> Self {
+        Self { x: self.x, y: self.y.clone() } // `y` 需要调用 `clone` 方法
+    }
+}
+
+fn main() {
+    let p1 = Point { x: 5, y: String::from("hello") };
+    let p2 = p1.clone(); // 手动实现的 clone 方法
+    println!("p1: ({}, {}), p2: ({}, {})", p1.x, p1.y, p2.x, p2.y);
+}
+
+```
+
+
+
 
 &ensp; &ensp; &ensp;没错，只要你能够定义如何创建一个新的副本，你就可以实现 `Clone` trait。
 
