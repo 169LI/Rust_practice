@@ -1693,3 +1693,50 @@ fn main() {
 &ensp; &ensp; &ensp;手动实现 `Clone` 允许对克隆过程进行更精细的控制，例如在克隆时执行特定逻辑或只克隆部分字段。只要你能够定义如何创建一个新的副本，你就可以实现 `Clone` trait。
 
 ## 2.4 Rc 与 Arc
+
+&ensp; &ensp; &ensp;在 Rust 中，`Rc` 和 `Arc` 是用于引用计数的智能指针，分别适用于单线程和多线程环境。这些智能指针允许多个拥有者共享一个值，这对于需要多重所有权的场景非常有用，特别是当无法为每个值找到唯一拥有者时。Rust 提供了这两种类型来满足不同的并发需求：
+
+- **`Rc<T>`（Reference Counted）**：
+    
+    - 适用于单线程场景。
+    - 通过引用计数来管理共享数据的生命周期。当最后一个引用被丢弃时，数据会自动释放。
+    - 不会导致数据竞争，但只能在单线程环境中使用。
+- **`Arc<T>`（Atomic Reference Counted）**：
+    
+    - 适用于多线程场景，是 `Rc` 的线程安全版本。
+    - 使用原子操作进行引用计数，因此开销比 `Rc` 稍高，但保证了线程安全。
+    - 在多线程场景中，可以安全地在多个线程中共享数据。
+
+```
+use std::rc::Rc;
+
+fn main() {
+    let value = Rc::new(5);
+    let a = Rc::clone(&value); // 增加引用计数
+    let b = Rc::clone(&value);
+
+    println!("a: {}, b: {}, value: {}", a, b, value);
+    println!("引用计数: {}", Rc::strong_count(&value));   //3
+}
+```
+
+```
+use std::sync::Arc;
+use std::thread;
+
+fn main() {
+    let value = Arc::new(5);
+    let handles: Vec<_> = (0..3).map(|_| {
+        let value = Arc::clone(&value);
+        thread::spawn(move || {
+            println!("线程中的值: {}", value);
+        })
+    }).collect();
+
+    for handle in handles {
+        handle.join().unwrap();
+    }
+}
+```
+
+Rust 的 `Rc` 和 `Arc` 避免了手动管理引用计数的风险，确保引用计数的安全性和准确性。
