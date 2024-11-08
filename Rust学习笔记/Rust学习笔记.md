@@ -1751,9 +1751,34 @@ let t: Rc<String> = s.clone();
 let u: Rc<String> = s.clone();
 ```
 
-![|475](image/{{所有权2.1}}-20241108-9.png)
+![|450](image/{{所有权2.1}}-20241108-9.png)
 
 &ensp; &ensp; &ensp;这 3 个 Rc\<String> 指针指向了同一个内存块，其中包含引用计数和 String本身的空间。通常的所有权规则适用于 Rc 指针本身，当丢弃最后一个现有 Rc 时，
 Rust 也会丢弃 String。
 
-可以直接在 Rc\<String> 上使用 String 的任何常用方法：
+&ensp; &ensp; &ensp;可以直接在 Rc\<String> 上使用 String 的任何常用方法（仅是读的操作），如果你试图将一些文本添加到字符串的末尾：`s.push_str(" noodles")`那么 Rust 会拒绝。
+
+&ensp; &ensp; &ensp;Rust 的内存和线程安全保证的基石是：确保不会有任何值是既共享又可变的。Rust 假定 Rc 指针的引用目标通常都可以共享，因此就不能是可变的。
+
+&ensp; &ensp; &ensp;移动和引用计数指针是缓解所有权树严格性问题的两种途径。接下来我们将研究第三种途径：借用对值的引用。
+
+# 三.引用
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
