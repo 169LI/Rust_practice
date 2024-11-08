@@ -1423,5 +1423,14 @@ fn main(){
 }
 ```
 
-## 2.2.1 移动类的操作 
+### 2.2.1 移动的发生
 
+1. 初始化与赋值：
+&ensp; &ensp; &ensp;在变量进入 let 语句的作用域时为它们提供值。给变量赋值则与此略有不同，如果你将一个值转移给已初始化的变量，那么 Rust 就会丢弃该变量的先前值。
+
+```
+fn main(){
+    let mut s = "Govinda".to_string();
+    s = "Siddhartha".to_string(); // 在这里丢弃了值"Govinda"
+}
+```
