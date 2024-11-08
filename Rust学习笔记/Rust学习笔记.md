@@ -1609,7 +1609,8 @@ fn main(){
 &ensp; &ensp; &ensp;num1 和 num2 的情况有所不同。i32 只是内存中的几字节，它不拥有任何堆资源，也不会实际依赖除本身的字节之外的任何内存。当我们将它的每一位转移给 num2 时，其实已经为 num1 制作了一个完全独立的副本。
 
 &ensp; &ensp; &ensp;大多数类型会被移动，现在该谈谈例外情况了，即那些被Rust 指定成 **Copy 类型**的类型。对 Copy 类型的值进行赋值会复制这个值，而不会移动它。赋值的源仍会保持已初始化和可用状态，并且具有与之前相同的值。把 Copy类型传给函数和构造器的行为也是如此。
-###2.3.1  实现了 Copy 特征的基本类型
+### 2.3.1  实现了Copy 特征的基本类型
+
 &ensp; &ensp; &ensp;Rust 中的基本类型都实现了 Copy 特征，包括整数、浮点数、布尔值和字符。对于复合类型来说，如果包含的所有字段都是 Copy 的，那么这个元素也是 Copy 的。例如：(i32, i32) 、\[i32,i32]是 Copy 的，但 (i32, String) 、 \[i32, String]则不是。
 
 &ensp; &ensp; &ensp;任何在丢弃值时需要做一些特殊操作的类型都不能是 Copy 类型：Vec 需要释放自身元素、File 需要关闭自身文件句柄、MutexGuard 需要解锁自身互斥锁，等等。
@@ -1625,8 +1626,24 @@ struct Label { number: u32 }
 &ensp; &ensp; &ensp;经过此项更改，前面的代码可以顺利编译了。
 
 &ensp; &ensp; &ensp;切记不要试图在一个字段不全是Copy 类型的结构体上这样做。
-
+### 2.3.2 Clone
 &ensp; &ensp; &ensp;说到Copy，那就不得提一提他的好兄弟Clone，这里做一简单介绍：
 
+&ensp; &ensp; &ensp;与 `Copy` 不同，`Clone` 允许你**显式**地复制类型的值。当一个类型实现了 `Clone` trait 时，你可以调用它的 `clone` 方法来创建一个新的副本。
 
+&ensp; &ensp; &ensp;要实现 `Clone` trait，你需要在类型定义上添加 `#[derive(Clone)]` 属性或手动实现 `clone` 方法。
 
+```
+#[derive(Clone)]
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+// 或者手动实现 clone 方法
+impl Clone for Point {
+    fn clone(&self) -> Self {
+        Self { x: self.x, y: self.y }
+    }
+}
+```
