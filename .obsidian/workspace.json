@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f1aea6d86011a22e",
+        "id": "df9c548055306efc",
         "type": "tabs",
         "children": [
           {
-            "id": "c2d40a7a240f7bea",
+            "id": "bc5b414831da44ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Rust学习笔记/Rust学习笔记.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -73,8 +73,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -88,7 +87,7 @@
       {
         "id": "e86218f372717184",
         "type": "tabs",
-        "dimension": 76,
+        "dimension": 60,
         "children": [
           {
             "id": "415b06ff4cc4251e",
@@ -174,7 +173,7 @@
       {
         "id": "eeb927aa09928d95",
         "type": "tabs",
-        "dimension": 24,
+        "dimension": 40,
         "children": [
           {
             "id": "4b59d87a5177aea4",
@@ -190,11 +189,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 503.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
-      "daily-notes:打开/创建今天的日记": false,
+      "daily-notes:打开/创建今天的日记": true,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -204,8 +203,13 @@
       "dashboard-navigator:Open dashboard navigator": false
     }
   },
-  "active": "c2d40a7a240f7bea",
+  "active": "bc5b414831da44ee",
   "lastOpenFiles": [
+    "2024-11-08.md",
+    "日程/24-11/2024-11-08.md",
+    "日程/24-11/2024-11-07.md",
+    "Rust学习笔记/Rust学习笔记.md",
+    "Rust学习笔记/image/{{所有权2.1}}-20241108-9.png",
     "Rust学习笔记/image/{{所有权2.1}}-20241108-8.png",
     "Rust学习笔记/image/{{所有权2.1}}-20241108-7.png",
     "Rust学习笔记/image/{{所有权2.1}}-20241108-6.png",
@@ -216,11 +220,6 @@
     "Rust学习笔记/image/{{所有权2.1}}-20241108-1.png",
     "Rust学习笔记/image/{{所有权2.1}}-20241108.png",
     "Rust习题/第三章习题未修正.md",
-    "日程/24-11/2024-11-08.md",
-    "日程/24-11/2024-11-07.md",
-    "Rust学习笔记/Rust学习笔记.md",
-    "Rust学习笔记/image/{{数据类型}}-20241107-2.png",
-    "Rust学习笔记/image/{{数据类型}}-20241107-1.png",
     "2024-11-07.md",
     "日程/24-11",
     "日程",

@@ -1739,4 +1739,20 @@ fn main() {
 }
 ```
 
-Rust 的 `Rc` 和 `Arc` 避免了手动管理引用计数的风险，确保引用计数的安全性和准确性。
+&ensp; &ensp; &ensp;Rust 的 `Rc` 和 `Arc` 避免了手动管理引用计数的风险，确保引用计数的安全性和准确性。如果不需要在线程之间共享指针，则没有理由为 Arc 的性能损失“埋单”，因此应该使用Rc，Rust 能防止你无意间跨越线程边界传递它。这两种类型在其他方面都是等效的。
+
+&ensp; &ensp; &ensp;克隆一个 Rc\<T> 值并不会复制 T，相反，它只会**创建另一个指向它的指针并递增引用计数**。
+
+```
+use std::rc::Rc;
+// Rust能推断出所有这些类型，这里写出它们只是为了讲解时清晰
+let s: Rc<String> = Rc::new("shirataki".to_string());
+let t: Rc<String> = s.clone();
+let u: Rc<String> = s.clone();
+```
+
+![|475](image/{{所有权2.1}}-20241108-9.png)
+
+&ensp; &ensp; &ensp;这 3 个 Rc<String> 指针指向了同一个内存块，其中包含引用计数和 String
+本身的空间。通常的所有权规则适用于 Rc 指针本身，当丢弃最后一个现有 Rc 时，
+Rust 也会丢弃 String
