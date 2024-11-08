@@ -1615,12 +1615,25 @@ fn main(){
 
 &ensp; &ensp; &ensp;任何在丢弃值时需要做一些特殊操作的类型都不能是 Copy 类型：Vec 需要释放自身元素、File 需要关闭自身文件句柄、MutexGuard 需要解锁自身互斥锁，等等。
 
-&ensp; &ensp; &ensp;那么自定义类型呢？**默认情况下**，struct 类型和 enum 类型不是 Copy 类型，你如果要用，就会发生**所有权转移**。
-
-&ensp; &ensp; &ensp;但是结构体的所有字段本身都是 Copy 类型，那么也可以通过将属性\#\[derive(Copy,Clone)] 放置在此定义之上来创建 Copy 类型，(一会再说这个Clone)如下所示：
+&ensp; &ensp; &ensp;那么自定义类型呢？**默认情况下**，struct 类型和 enum 类型不是 Copy 类型，你如果要用，就会发生**所有权转移**，后续在编写代码时该变量不可再用。但是结构体的所有字段本身都是 Copy 类型，那么也可以通过将属性`#[derive(Copy,Clone)]`放置在此定义之上来创建 Copy 类型，(一会再说这个Clone)如下所示：
 ```
-#[derive(Copy, Clone)]
-struct Label { number: u32 }
+#[derive(Copy,Clone)]
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+fn main() {
+    let p1 = Point { x: 5, y: 10 };
+    
+    // 由于 `Point` 实现了 `Copy` 特性，赋值会自动复制
+    let p2 = p1;        // 自动复制（按位复制）
+
+    // 使用 `clone()` 方法显式复制
+    let p3 = p1.clone(); // 显式复制（效果和自动复制相同）
+
+    println!("p1: ({}, {}), p2: ({}, {}), p3: ({}, {})", p1.x, p1.y, p2.x, p2.y, p3.x, p3.y);
+}
 ```
 
 &ensp; &ensp; &ensp;经过此项更改，前面的代码可以顺利编译了。
@@ -1635,21 +1648,21 @@ struct Label { number: u32 }
 
 ```
 #[derive(Copy,Clone)]
-struct Point {
-    x: i32,
-    y: i32,
+
+struct Person {
+    name: String,
+    age: u8,
 }
 
-// 或者手动实现 clone 方法
-impl Clone for Point {
-    fn clone(&self) -> Self {
-        Self { x: self.x, y: self.y }
-    }
-}
 fn main() {
-    let p1 = Point { x: 1, y: 2 };
-    let p2 = p1; // 自动复制
-    let p3 = p1.clone(); // 显式复制
+    let person1 = Person { name: String::from("Alice"), age: 30 };
+    
+    // let person2 = person1; // 这会转移所有权，person1 不再可用
+    
+    let person2 = person1.clone(); // 显式复制
+
+    println!("person1: {}, {}", person1.name, person1.age);
+    println!("person2: {}, {}", person2.name, person2.age);
 }
 ```
 
